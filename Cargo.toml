@@ -1,0 +1,12 @@
+[package]
+name = "czlings"
+version = "0.1.0"
+edition = "2021"
+description = "Rustlings-style exercises for C and C++ (BME VIK level)"
+
+[[bin]]
+name = "czlings"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 2

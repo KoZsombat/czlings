@@ -1,0 +1,119 @@
+[[exercises]]
+name = "cpp19_templates_fn"
+path = "exercises/04_cpp_advanced/cpp19_templates_fn.cpp"
+mode = "test"
+hint = "Make max_of return the larger argument, and have clamp_value convert each bound back to T before returning it."
+
+[[exercises]]
+name = "cpp20_templates_class"
+path = "exercises/04_cpp_advanced/cpp20_templates_class.cpp"
+mode = "test"
+hint = "Guard push with size_ == N and pop/top with size_ == 0; throw std::overflow_error and std::out_of_range, not sentinels."
+
+[[exercises]]
+name = "cpp21_template_specialization"
+path = "exercises/04_cpp_advanced/cpp21_template_specialization.cpp"
+mode = "test"
+hint = "Add template <> struct Printer<bool> above main returning true/false, before any use instantiates the primary template."
+
+[[exercises]]
+name = "cpp22_stl_vector"
+path = "exercises/04_cpp_advanced/cpp22_stl_vector.cpp"
+mode = "test"
+hint = "Keep values where value % 2 == 0, and erase with it = values.erase(it), incrementing only when nothing was erased."
+
+[[exercises]]
+name = "cpp23_stl_map_set"
+path = "exercises/04_cpp_advanced/cpp23_stl_map_set.cpp"
+mode = "test"
+hint = "Replace insert() with ++counts[word]; insert() keeps the existing value when the key is already present."
+
+[[exercises]]
+name = "cpp24_stl_algorithms"
+path = "exercises/04_cpp_advanced/cpp24_stl_algorithms.cpp"
+mode = "test"
+hint = "Sort with the comparator a > b and search for value < 0; std::accumulate already starts from 0."
+
+[[exercises]]
+name = "cpp25_lambdas"
+path = "exercises/04_cpp_advanced/cpp25_lambdas.cpp"
+mode = "test"
+hint = "Return a mutable value-capturing lambda that increments before returning, sort by std::abs, and capture total by reference."
+
+[[exercises]]
+name = "cpp26_iterators"
+path = "exercises/04_cpp_advanced/cpp26_iterators.cpp"
+mode = "test"
+hint = "Count every match without breaking, copy rbegin()..rend() with back_inserter, and deduplicate through std::set."
+
+[[exercises]]
+name = "cpp27_smart_unique"
+path = "exercises/04_cpp_advanced/cpp27_smart_unique.cpp"
+mode = "test"
+hint = "Return std::make_unique<Cat>() for cat, append every animal's voice, and return the unique_ptr the function was given."
+
+[[exercises]]
+name = "cpp28_smart_shared"
+path = "exercises/04_cpp_advanced/cpp28_smart_shared.cpp"
+mode = "test"
+hint = "Assign child->parent = parent inside link; the weak_ptr copies the control block without adding an owner."
+
+[[exercises]]
+name = "cpp29_optional_variant"
+path = "exercises/04_cpp_advanced/cpp29_optional_variant.cpp"
+mode = "test"
+hint = "Validate each character yourself and return std::nullopt on failure; handle double and string with if constexpr."
+
+[[exercises]]
+name = "cpp30_dynamic_array"
+path = "exercises/04_cpp_advanced/cpp30_dynamic_array.cpp"
+mode = "test"
+hint = "grow() already reallocates; call it from reserve when needed. In insert check index > size_, grow if full, shift right from size_ down to index. In erase check index >= size_, then shift left."
+
+[[exercises]]
+name = "cpp31_linked_list"
+path = "exercises/04_cpp_advanced/cpp31_linked_list.cpp"
+mode = "test"
+hint = "Link the new node in front of head_ and relink every node in reverse() using three std::move calls per iteration."
+
+[[exercises]]
+name = "cpp32_bst"
+path = "exercises/04_cpp_advanced/cpp32_bst.cpp"
+mode = "test"
+hint = "Compare key with slot->key to choose a side, walk left-root-right, and compute height as 1 + max of the two subtree heights."
+
+[[exercises]]
+name = "cpp33_complex"
+path = "exercises/04_cpp_advanced/cpp33_complex.cpp"
+mode = "test"
+hint = "Also add other.im_ in operator+=, and in operator<< print '-' with -value.im_ when the imaginary part is negative."
+
+[[exercises]]
+name = "cpp34_matrix"
+path = "exercises/04_cpp_advanced/cpp34_matrix.cpp"
+mode = "test"
+hint = "Throw std::invalid_argument unless cols_ == other.rows_, and sum data_[i][k] * other.data_[k][j] over every k."
+
+[[exercises]]
+name = "cpp35_shapes"
+path = "exercises/04_cpp_advanced/cpp35_shapes.cpp"
+mode = "test"
+hint = "Make area() and name() pure virtual in Shape and mark both subclass definitions override."
+
+[[exercises]]
+name = "cpp36_error_handling"
+path = "exercises/04_cpp_advanced/cpp36_error_handling.cpp"
+mode = "test"
+hint = "Throw InvalidArgument, NotFound and std::overflow_error; check capacity before writing; declare is_even noexcept."
+
+[[exercises]]
+name = "cpp37_modern_idioms"
+path = "exercises/04_cpp_advanced/cpp37_modern_idioms.cpp"
+mode = "test"
+hint = "Return {lo, hi}, switch on code / 100 declared inside the switch, and pass value to std::bitset<8> without shifting."
+
+[[exercises]]
+name = "cpp38_wordcount"
+path = "exercises/04_cpp_advanced/cpp38_wordcount.cpp"
+mode = "test"
+hint = "Keep only isalpha bytes, lowercase them, and sort by count descending with the word ascending as the tie-break."

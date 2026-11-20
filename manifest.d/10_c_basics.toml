@@ -1,0 +1,71 @@
+[[exercises]]
+name = "c01_hello"
+path = "exercises/01_c_basics/c01_hello.c"
+mode = "test"
+hint = "Return what snprintf returns (the untruncated length) instead of strlen(out); with cap 0 snprintf writes nothing but still reports the full length."
+
+[[exercises]]
+name = "c02_types"
+path = "exercises/01_c_basics/c02_types.c"
+mode = "test"
+hint = "Return sizeof(T) cast to int for byte counts, INT_MAX from limits.h, FLT_DIG from float.h, and 0u - 1u for the wrapped unsigned maximum."
+
+[[exercises]]
+name = "c03_arithmetic"
+path = "exercises/01_c_basics/c03_arithmetic.c"
+mode = "test"
+hint = "Use / for signed integer division, 2.0 to force a floating average, parentheses around the sum, and note that x *= 2 + 3 multiplies by 5."
+
+[[exercises]]
+name = "c04_control"
+path = "exercises/01_c_basics/c04_control.c"
+mode = "test"
+hint = "Use >= 90 so 90 earns an A, return -v for negatives, and add the missing v > hi branch returning hi before the final return."
+
+[[exercises]]
+name = "c05_switch"
+path = "exercises/01_c_basics/c05_switch.c"
+mode = "test"
+hint = "Add break after every case body; without it + falls through to - and - to *, so only the last assignment survives."
+
+[[exercises]]
+name = "c06_loops"
+path = "exercises/01_c_basics/c06_loops.c"
+mode = "test"
+hint = "Make the for condition i <= n, use do-while so digit counting runs once for zero, and build the reverse with reversed * 10 + n % 10."
+
+[[exercises]]
+name = "c07_loop_control"
+path = "exercises/01_c_basics/c07_loop_control.c"
+mode = "test"
+hint = "Return 0 as soon as a divisor is found and handle n < 2, continue unless i is divisible by 3 or 5, and let the inner loop run c <= r."
+
+[[exercises]]
+name = "c08_functions"
+path = "exercises/01_c_basics/c08_functions.c"
+mode = "test"
+hint = "bump and swap only change copies, so leave them; return v * 3 from triple and build a new Pair with a = p.b and b = p.a."
+
+[[exercises]]
+name = "c09_recursion"
+path = "exercises/01_c_basics/c09_recursion.c"
+mode = "test"
+hint = "Return 1 when n <= 1, stop gcd when b == 0 and recurse on gcd(b, a % b), and give ipow the exp == 0 base case returning 1."
+
+[[exercises]]
+name = "c10_arrays"
+path = "exercises/01_c_basics/c10_arrays.c"
+mode = "test"
+hint = "Loop i < n, start the maximum at arr[0], and swap only while i < n / 2 so the array is not reversed twice."
+
+[[exercises]]
+name = "c11_2d_arrays"
+path = "exercises/01_c_basics/c11_2d_arrays.c"
+mode = "test"
+hint = "Let the add loop run r < 3, copy in[c][r] in the transpose, and sum m[0][0], m[1][1], m[2][2] for the trace."
+
+[[exercises]]
+name = "c12_strings"
+path = "exercises/01_c_basics/c12_strings.c"
+mode = "test"
+hint = "Compares must scan until characters differ or a NUL is reached; the copy needs len + 1 <= cap, writes dst[len] = 0, and empties dst on failure."

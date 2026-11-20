@@ -1,0 +1,107 @@
+[[exercises]]
+name = "cpp01_io"
+path = "exercises/03_cpp_core/cpp01_io.cpp"
+mode = "test"
+hint = "Build the line with out << name << ': ' << score << '/100'; set fixed and setprecision(2) before printing the price."
+
+[[exercises]]
+name = "cpp02_refs"
+path = "exercises/03_cpp_core/cpp02_refs.cpp"
+mode = "test"
+hint = "Write through the reference parameters (a = b; b = tmp;) and uppercase each character as unsigned char before appending '!'."
+
+[[exercises]]
+name = "cpp03_overload_default"
+path = "exercises/03_cpp_core/cpp03_overload_default.cpp"
+mode = "test"
+hint = "Delete the one-argument int overload; scaled(int, int = 2) already accepts one argument, so keeping both makes scaled(5) ambiguous."
+
+[[exercises]]
+name = "cpp04_class_basic"
+path = "exercises/03_cpp_core/cpp04_class_basic.cpp"
+mode = "test"
+hint = "area is width_ * height_ and is_square compares the two; both are already const, so keep the const qualifiers."
+
+[[exercises]]
+name = "cpp05_ctor_init"
+path = "exercises/03_cpp_core/cpp05_ctor_init.cpp"
+mode = "test"
+hint = "Members initialize in declaration order: declare first_ before second_. Delegate with Email(user) : Email(std::move(user), 'example.com')."
+
+[[exercises]]
+name = "cpp06_dtor_raii"
+path = "exercises/03_cpp_core/cpp06_dtor_raii.cpp"
+mode = "test"
+hint = "In the destructor decrement depth_ and append ')' to g_log; nesting then produces the reverse order (())."
+
+[[exercises]]
+name = "cpp07_copy"
+path = "exercises/03_cpp_core/cpp07_copy.cpp"
+mode = "test"
+hint = "Copy every element in the copy constructor; in assignment allocate a fresh buffer, copy, delete the old one, then update size_."
+
+[[exercises]]
+name = "cpp08_static"
+path = "exercises/03_cpp_core/cpp08_static.cpp"
+mode = "test"
+hint = "Increment alive_ in both constructors and decrement it in the destructor; alive_ is defined once outside the class."
+
+[[exercises]]
+name = "cpp09_operators"
+path = "exercises/03_cpp_core/cpp09_operators.cpp"
+mode = "test"
+hint = "Combine both components in + and +=, compare both in ==, return !(a == b) for !=, and index data_[index] in operator[]."
+
+[[exercises]]
+name = "cpp10_friend"
+path = "exercises/03_cpp_core/cpp10_friend.cpp"
+mode = "test"
+hint = "The friend declarations already grant access: print meter.value_ << ' m' and return meter.value_ from raw()."
+
+[[exercises]]
+name = "cpp11_inheritance"
+path = "exercises/03_cpp_core/cpp11_inheritance.cpp"
+mode = "test"
+hint = "Forward name to Animal(name), return 'Woof' from Dog::speak, call Animal::speak() for the base text, and use name_ in tag()."
+
+[[exercises]]
+name = "cpp12_polymorphism"
+path = "exercises/03_cpp_core/cpp12_polymorphism.cpp"
+mode = "test"
+hint = "Mark area and name virtual in Shape and the overrides with override; make ~Shape virtual so Tracked's destructor runs on delete."
+
+[[exercises]]
+name = "cpp13_enums_constexpr"
+path = "exercises/03_cpp_core/cpp13_enums_constexpr.cpp"
+mode = "test"
+hint = "Add square(value) inside the range-for, and handle Color::Green and Color::Blue in the switch (enum class is scoped)."
+
+[[exercises]]
+name = "cpp14_namespaces"
+path = "exercises/03_cpp_core/cpp14_namespaces.cpp"
+mode = "test"
+hint = "Return 2 * value from app::math::twice and text + text from app::text::twice; the names are already in their namespaces."
+
+[[exercises]]
+name = "cpp15_strings_streams"
+path = "exercises/03_cpp_core/cpp15_strings_streams.cpp"
+mode = "test"
+hint = "Extract count and price too; pass used to stoi/stod and require used == text.size(), otherwise return the fallback; substr up to find(' ')."
+
+[[exercises]]
+name = "cpp16_new_delete"
+path = "exercises/03_cpp_core/cpp16_new_delete.cpp"
+mode = "test"
+hint = "The destructor owns the buffer: delete[] data_ (not delete) and decrement live_ so no allocation survives scope exit."
+
+[[exercises]]
+name = "cpp17_exceptions"
+path = "exercises/03_cpp_core/cpp17_exceptions.cpp"
+mode = "test"
+hint = "Throw ValidationError with the exact messages for age < 0 and age > 150; valid ages fall through and return normally."
+
+[[exercises]]
+name = "cpp18_move"
+path = "exercises/03_cpp_core/cpp18_move.cpp"
+mode = "test"
+hint = "Move constructor and assignment steal data_, set the source to size 0 and nullptr, increment moves, and are marked noexcept."

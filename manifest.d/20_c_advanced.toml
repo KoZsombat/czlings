@@ -1,0 +1,107 @@
+[[exercises]]
+name = "c13_pointers"
+path = "exercises/02_c_advanced/c13_pointers.c"
+mode = "test"
+hint = "Dereference to update: assign through a and b in swap, return &values[i] from find_int, and write *value in add_to."
+
+[[exercises]]
+name = "c14_pointer_arith"
+path = "exercises/02_c_advanced/c14_pointer_arith.c"
+mode = "test"
+hint = "Move the pointer with ++p; index_of returns p - values, and reverse swaps while left < right."
+
+[[exercises]]
+name = "c15_const"
+path = "exercises/02_c_advanced/c15_const.c"
+mode = "test"
+hint = "Read declarations right to left: const int *p protects the pointee, int *const p protects the pointer."
+
+[[exercises]]
+name = "c16_string_lib"
+path = "exercises/02_c_advanced/c16_string_lib.c"
+mode = "test"
+hint = "Keep one byte for the terminator, compare strlen(src) with cap - used - 1, and pass the full format to snprintf."
+
+[[exercises]]
+name = "c17_structs"
+path = "exercises/02_c_advanced/c17_structs.c"
+mode = "test"
+hint = "Store both coordinates, compute width * height, and copy both corners into the returned Rect."
+
+[[exercises]]
+name = "c18_struct_ptr"
+path = "exercises/02_c_advanced/c18_struct_ptr.c"
+mode = "test"
+hint = "Update p->score and p->plays directly, track the largest score, and terminate the copied name."
+
+[[exercises]]
+name = "c19_enums_unions"
+path = "exercises/02_c_advanced/c19_enums_unions.c"
+mode = "test"
+hint = "Assign 1, 2 and 4 explicitly, use union for Word, make a 3 bits and b 5 bits, and handle CZ_BLUE."
+
+[[exercises]]
+name = "c20_malloc"
+path = "exercises/02_c_advanced/c20_malloc.c"
+mode = "test"
+hint = "After storing data[len], increment len; realloc into a temporary and keep the returned pointer."
+
+[[exercises]]
+name = "c21_dynamic_string"
+path = "exercises/02_c_advanced/c21_dynamic_string.c"
+mode = "test"
+hint = "Allocate strlen + 1, check src for NULL first, and let join allocate both lengths plus the terminator."
+
+[[exercises]]
+name = "c22_linked_list"
+path = "exercises/02_c_advanced/c22_linked_list.c"
+mode = "test"
+hint = "Walk with p = p->next until NULL for length and sum; list_free already frees the whole chain."
+
+[[exercises]]
+name = "c23_file_text"
+path = "exercises/02_c_advanced/c23_file_text.c"
+mode = "test"
+hint = "Print a newline after each line, rewind before counting, and treat EOF from fgetc as an int."
+
+[[exercises]]
+name = "c24_file_binary"
+path = "exercises/02_c_advanced/c24_file_binary.c"
+mode = "test"
+hint = "Write all n records and divide the file size by sizeof(Record); seek relative to SEEK_END for the last one."
+
+[[exercises]]
+name = "c25_preprocessor"
+path = "exercises/02_c_advanced/c25_preprocessor.c"
+mode = "test"
+hint = "Parenthesise every parameter and the whole macro; wrap CLAMP_ADD in do while 0, and set CZ_MODE to 2 for the safe branch."
+
+[[exercises]]
+name = "c26_bitops"
+path = "exercises/02_c_advanced/c26_bitops.c"
+mode = "test"
+hint = "Set with OR and clear with AND NOT; reject zero in the power test and rebuild only the low byte in the swap."
+
+[[exercises]]
+name = "c27_argv"
+path = "exercises/02_c_advanced/c27_argv.c"
+mode = "test"
+hint = "Loop from index 1 to argc - 1 and compare each argv[i] with flag using strcmp."
+
+[[exercises]]
+name = "c28_scope_storage"
+path = "exercises/02_c_advanced/c28_scope_storage.c"
+mode = "test"
+hint = "Make calls static, increment file_counter, and remove the inner return so the outer y is returned."
+
+[[exercises]]
+name = "c29_qsort"
+path = "exercises/02_c_advanced/c29_qsort.c"
+mode = "test"
+hint = "Return a negative, zero or positive comparison instead of a boolean; cmp_str must strcmp the pointed-to strings."
+
+[[exercises]]
+name = "c30_ub_traps"
+path = "exercises/02_c_advanced/c30_ub_traps.c"
+mode = "test"
+hint = "Initialise all three values, stop the loop at i < 3, use static storage for slot, and check limits before adding."

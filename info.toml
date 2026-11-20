@@ -1,0 +1,404 @@
+[[exercises]]
+name = "c01_hello"
+path = "exercises/01_c_basics/c01_hello.c"
+mode = "test"
+hint = "Return what snprintf returns (the untruncated length) instead of strlen(out); with cap 0 snprintf writes nothing but still reports the full length."
+
+[[exercises]]
+name = "c02_types"
+path = "exercises/01_c_basics/c02_types.c"
+mode = "test"
+hint = "Return sizeof(T) cast to int for byte counts, INT_MAX from limits.h, FLT_DIG from float.h, and 0u - 1u for the wrapped unsigned maximum."
+
+[[exercises]]
+name = "c03_arithmetic"
+path = "exercises/01_c_basics/c03_arithmetic.c"
+mode = "test"
+hint = "Use / for signed integer division, 2.0 to force a floating average, parentheses around the sum, and note that x *= 2 + 3 multiplies by 5."
+
+[[exercises]]
+name = "c04_control"
+path = "exercises/01_c_basics/c04_control.c"
+mode = "test"
+hint = "Use >= 90 so 90 earns an A, return -v for negatives, and add the missing v > hi branch returning hi before the final return."
+
+[[exercises]]
+name = "c05_switch"
+path = "exercises/01_c_basics/c05_switch.c"
+mode = "test"
+hint = "Add break after every case body; without it + falls through to - and - to *, so only the last assignment survives."
+
+[[exercises]]
+name = "c06_loops"
+path = "exercises/01_c_basics/c06_loops.c"
+mode = "test"
+hint = "Make the for condition i <= n, use do-while so digit counting runs once for zero, and build the reverse with reversed * 10 + n % 10."
+
+[[exercises]]
+name = "c07_loop_control"
+path = "exercises/01_c_basics/c07_loop_control.c"
+mode = "test"
+hint = "Return 0 as soon as a divisor is found and handle n < 2, continue unless i is divisible by 3 or 5, and let the inner loop run c <= r."
+
+[[exercises]]
+name = "c08_functions"
+path = "exercises/01_c_basics/c08_functions.c"
+mode = "test"
+hint = "bump and swap only change copies, so leave them; return v * 3 from triple and build a new Pair with a = p.b and b = p.a."
+
+[[exercises]]
+name = "c09_recursion"
+path = "exercises/01_c_basics/c09_recursion.c"
+mode = "test"
+hint = "Return 1 when n <= 1, stop gcd when b == 0 and recurse on gcd(b, a % b), and give ipow the exp == 0 base case returning 1."
+
+[[exercises]]
+name = "c10_arrays"
+path = "exercises/01_c_basics/c10_arrays.c"
+mode = "test"
+hint = "Loop i < n, start the maximum at arr[0], and swap only while i < n / 2 so the array is not reversed twice."
+
+[[exercises]]
+name = "c11_2d_arrays"
+path = "exercises/01_c_basics/c11_2d_arrays.c"
+mode = "test"
+hint = "Let the add loop run r < 3, copy in[c][r] in the transpose, and sum m[0][0], m[1][1], m[2][2] for the trace."
+
+[[exercises]]
+name = "c12_strings"
+path = "exercises/01_c_basics/c12_strings.c"
+mode = "test"
+hint = "Compares must scan until characters differ or a NUL is reached; the copy needs len + 1 <= cap, writes dst[len] = 0, and empties dst on failure."
+[[exercises]]
+name = "c13_pointers"
+path = "exercises/02_c_advanced/c13_pointers.c"
+mode = "test"
+hint = "Dereference to update: assign through a and b in swap, return &values[i] from find_int, and write *value in add_to."
+
+[[exercises]]
+name = "c14_pointer_arith"
+path = "exercises/02_c_advanced/c14_pointer_arith.c"
+mode = "test"
+hint = "Move the pointer with ++p; index_of returns p - values, and reverse swaps while left < right."
+
+[[exercises]]
+name = "c15_const"
+path = "exercises/02_c_advanced/c15_const.c"
+mode = "test"
+hint = "Read declarations right to left: const int *p protects the pointee, int *const p protects the pointer."
+
+[[exercises]]
+name = "c16_string_lib"
+path = "exercises/02_c_advanced/c16_string_lib.c"
+mode = "test"
+hint = "Keep one byte for the terminator, compare strlen(src) with cap - used - 1, and pass the full format to snprintf."
+
+[[exercises]]
+name = "c17_structs"
+path = "exercises/02_c_advanced/c17_structs.c"
+mode = "test"
+hint = "Store both coordinates, compute width * height, and copy both corners into the returned Rect."
+
+[[exercises]]
+name = "c18_struct_ptr"
+path = "exercises/02_c_advanced/c18_struct_ptr.c"
+mode = "test"
+hint = "Update p->score and p->plays directly, track the largest score, and terminate the copied name."
+
+[[exercises]]
+name = "c19_enums_unions"
+path = "exercises/02_c_advanced/c19_enums_unions.c"
+mode = "test"
+hint = "Assign 1, 2 and 4 explicitly, use union for Word, make a 3 bits and b 5 bits, and handle CZ_BLUE."
+
+[[exercises]]
+name = "c20_malloc"
+path = "exercises/02_c_advanced/c20_malloc.c"
+mode = "test"
+hint = "After storing data[len], increment len; realloc into a temporary and keep the returned pointer."
+
+[[exercises]]
+name = "c21_dynamic_string"
+path = "exercises/02_c_advanced/c21_dynamic_string.c"
+mode = "test"
+hint = "Allocate strlen + 1, check src for NULL first, and let join allocate both lengths plus the terminator."
+
+[[exercises]]
+name = "c22_linked_list"
+path = "exercises/02_c_advanced/c22_linked_list.c"
+mode = "test"
+hint = "Walk with p = p->next until NULL for length and sum; list_free already frees the whole chain."
+
+[[exercises]]
+name = "c23_file_text"
+path = "exercises/02_c_advanced/c23_file_text.c"
+mode = "test"
+hint = "Print a newline after each line, rewind before counting, and treat EOF from fgetc as an int."
+
+[[exercises]]
+name = "c24_file_binary"
+path = "exercises/02_c_advanced/c24_file_binary.c"
+mode = "test"
+hint = "Write all n records and divide the file size by sizeof(Record); seek relative to SEEK_END for the last one."
+
+[[exercises]]
+name = "c25_preprocessor"
+path = "exercises/02_c_advanced/c25_preprocessor.c"
+mode = "test"
+hint = "Parenthesise every parameter and the whole macro; wrap CLAMP_ADD in do while 0, and set CZ_MODE to 2 for the safe branch."
+
+[[exercises]]
+name = "c26_bitops"
+path = "exercises/02_c_advanced/c26_bitops.c"
+mode = "test"
+hint = "Set with OR and clear with AND NOT; reject zero in the power test and rebuild only the low byte in the swap."
+
+[[exercises]]
+name = "c27_argv"
+path = "exercises/02_c_advanced/c27_argv.c"
+mode = "test"
+hint = "Loop from index 1 to argc - 1 and compare each argv[i] with flag using strcmp."
+
+[[exercises]]
+name = "c28_scope_storage"
+path = "exercises/02_c_advanced/c28_scope_storage.c"
+mode = "test"
+hint = "Make calls static, increment file_counter, and remove the inner return so the outer y is returned."
+
+[[exercises]]
+name = "c29_qsort"
+path = "exercises/02_c_advanced/c29_qsort.c"
+mode = "test"
+hint = "Return a negative, zero or positive comparison instead of a boolean; cmp_str must strcmp the pointed-to strings."
+
+[[exercises]]
+name = "c30_ub_traps"
+path = "exercises/02_c_advanced/c30_ub_traps.c"
+mode = "test"
+hint = "Initialise all three values, stop the loop at i < 3, use static storage for slot, and check limits before adding."
+[[exercises]]
+name = "cpp01_io"
+path = "exercises/03_cpp_core/cpp01_io.cpp"
+mode = "test"
+hint = "Build the line with out << name << ': ' << score << '/100'; set fixed and setprecision(2) before printing the price."
+
+[[exercises]]
+name = "cpp02_refs"
+path = "exercises/03_cpp_core/cpp02_refs.cpp"
+mode = "test"
+hint = "Write through the reference parameters (a = b; b = tmp;) and uppercase each character as unsigned char before appending '!'."
+
+[[exercises]]
+name = "cpp03_overload_default"
+path = "exercises/03_cpp_core/cpp03_overload_default.cpp"
+mode = "test"
+hint = "Delete the one-argument int overload; scaled(int, int = 2) already accepts one argument, so keeping both makes scaled(5) ambiguous."
+
+[[exercises]]
+name = "cpp04_class_basic"
+path = "exercises/03_cpp_core/cpp04_class_basic.cpp"
+mode = "test"
+hint = "area is width_ * height_ and is_square compares the two; both are already const, so keep the const qualifiers."
+
+[[exercises]]
+name = "cpp05_ctor_init"
+path = "exercises/03_cpp_core/cpp05_ctor_init.cpp"
+mode = "test"
+hint = "Members initialize in declaration order: declare first_ before second_. Delegate with Email(user) : Email(std::move(user), 'example.com')."
+
+[[exercises]]
+name = "cpp06_dtor_raii"
+path = "exercises/03_cpp_core/cpp06_dtor_raii.cpp"
+mode = "test"
+hint = "In the destructor decrement depth_ and append ')' to g_log; nesting then produces the reverse order (())."
+
+[[exercises]]
+name = "cpp07_copy"
+path = "exercises/03_cpp_core/cpp07_copy.cpp"
+mode = "test"
+hint = "Copy every element in the copy constructor; in assignment allocate a fresh buffer, copy, delete the old one, then update size_."
+
+[[exercises]]
+name = "cpp08_static"
+path = "exercises/03_cpp_core/cpp08_static.cpp"
+mode = "test"
+hint = "Increment alive_ in both constructors and decrement it in the destructor; alive_ is defined once outside the class."
+
+[[exercises]]
+name = "cpp09_operators"
+path = "exercises/03_cpp_core/cpp09_operators.cpp"
+mode = "test"
+hint = "Combine both components in + and +=, compare both in ==, return !(a == b) for !=, and index data_[index] in operator[]."
+
+[[exercises]]
+name = "cpp10_friend"
+path = "exercises/03_cpp_core/cpp10_friend.cpp"
+mode = "test"
+hint = "The friend declarations already grant access: print meter.value_ << ' m' and return meter.value_ from raw()."
+
+[[exercises]]
+name = "cpp11_inheritance"
+path = "exercises/03_cpp_core/cpp11_inheritance.cpp"
+mode = "test"
+hint = "Forward name to Animal(name), return 'Woof' from Dog::speak, call Animal::speak() for the base text, and use name_ in tag()."
+
+[[exercises]]
+name = "cpp12_polymorphism"
+path = "exercises/03_cpp_core/cpp12_polymorphism.cpp"
+mode = "test"
+hint = "Mark area and name virtual in Shape and the overrides with override; make ~Shape virtual so Tracked's destructor runs on delete."
+
+[[exercises]]
+name = "cpp13_enums_constexpr"
+path = "exercises/03_cpp_core/cpp13_enums_constexpr.cpp"
+mode = "test"
+hint = "Add square(value) inside the range-for, and handle Color::Green and Color::Blue in the switch (enum class is scoped)."
+
+[[exercises]]
+name = "cpp14_namespaces"
+path = "exercises/03_cpp_core/cpp14_namespaces.cpp"
+mode = "test"
+hint = "Return 2 * value from app::math::twice and text + text from app::text::twice; the names are already in their namespaces."
+
+[[exercises]]
+name = "cpp15_strings_streams"
+path = "exercises/03_cpp_core/cpp15_strings_streams.cpp"
+mode = "test"
+hint = "Extract count and price too; pass used to stoi/stod and require used == text.size(), otherwise return the fallback; substr up to find(' ')."
+
+[[exercises]]
+name = "cpp16_new_delete"
+path = "exercises/03_cpp_core/cpp16_new_delete.cpp"
+mode = "test"
+hint = "The destructor owns the buffer: delete[] data_ (not delete) and decrement live_ so no allocation survives scope exit."
+
+[[exercises]]
+name = "cpp17_exceptions"
+path = "exercises/03_cpp_core/cpp17_exceptions.cpp"
+mode = "test"
+hint = "Throw ValidationError with the exact messages for age < 0 and age > 150; valid ages fall through and return normally."
+
+[[exercises]]
+name = "cpp18_move"
+path = "exercises/03_cpp_core/cpp18_move.cpp"
+mode = "test"
+hint = "Move constructor and assignment steal data_, set the source to size 0 and nullptr, increment moves, and are marked noexcept."
+[[exercises]]
+name = "cpp19_templates_fn"
+path = "exercises/04_cpp_advanced/cpp19_templates_fn.cpp"
+mode = "test"
+hint = "Make max_of return the larger argument, and have clamp_value convert each bound back to T before returning it."
+
+[[exercises]]
+name = "cpp20_templates_class"
+path = "exercises/04_cpp_advanced/cpp20_templates_class.cpp"
+mode = "test"
+hint = "Guard push with size_ == N and pop/top with size_ == 0; throw std::overflow_error and std::out_of_range, not sentinels."
+
+[[exercises]]
+name = "cpp21_template_specialization"
+path = "exercises/04_cpp_advanced/cpp21_template_specialization.cpp"
+mode = "test"
+hint = "Add template <> struct Printer<bool> above main returning true/false, before any use instantiates the primary template."
+
+[[exercises]]
+name = "cpp22_stl_vector"
+path = "exercises/04_cpp_advanced/cpp22_stl_vector.cpp"
+mode = "test"
+hint = "Keep values where value % 2 == 0, and erase with it = values.erase(it), incrementing only when nothing was erased."
+
+[[exercises]]
+name = "cpp23_stl_map_set"
+path = "exercises/04_cpp_advanced/cpp23_stl_map_set.cpp"
+mode = "test"
+hint = "Replace insert() with ++counts[word]; insert() keeps the existing value when the key is already present."
+
+[[exercises]]
+name = "cpp24_stl_algorithms"
+path = "exercises/04_cpp_advanced/cpp24_stl_algorithms.cpp"
+mode = "test"
+hint = "Sort with the comparator a > b and search for value < 0; std::accumulate already starts from 0."
+
+[[exercises]]
+name = "cpp25_lambdas"
+path = "exercises/04_cpp_advanced/cpp25_lambdas.cpp"
+mode = "test"
+hint = "Return a mutable value-capturing lambda that increments before returning, sort by std::abs, and capture total by reference."
+
+[[exercises]]
+name = "cpp26_iterators"
+path = "exercises/04_cpp_advanced/cpp26_iterators.cpp"
+mode = "test"
+hint = "Count every match without breaking, copy rbegin()..rend() with back_inserter, and deduplicate through std::set."
+
+[[exercises]]
+name = "cpp27_smart_unique"
+path = "exercises/04_cpp_advanced/cpp27_smart_unique.cpp"
+mode = "test"
+hint = "Return std::make_unique<Cat>() for cat, append every animal's voice, and return the unique_ptr the function was given."
+
+[[exercises]]
+name = "cpp28_smart_shared"
+path = "exercises/04_cpp_advanced/cpp28_smart_shared.cpp"
+mode = "test"
+hint = "Assign child->parent = parent inside link; the weak_ptr copies the control block without adding an owner."
+
+[[exercises]]
+name = "cpp29_optional_variant"
+path = "exercises/04_cpp_advanced/cpp29_optional_variant.cpp"
+mode = "test"
+hint = "Validate each character yourself and return std::nullopt on failure; handle double and string with if constexpr."
+
+[[exercises]]
+name = "cpp30_dynamic_array"
+path = "exercises/04_cpp_advanced/cpp30_dynamic_array.cpp"
+mode = "test"
+hint = "grow() already reallocates; call it from reserve when needed. In insert check index > size_, grow if full, shift right from size_ down to index. In erase check index >= size_, then shift left."
+
+[[exercises]]
+name = "cpp31_linked_list"
+path = "exercises/04_cpp_advanced/cpp31_linked_list.cpp"
+mode = "test"
+hint = "Link the new node in front of head_ and relink every node in reverse() using three std::move calls per iteration."
+
+[[exercises]]
+name = "cpp32_bst"
+path = "exercises/04_cpp_advanced/cpp32_bst.cpp"
+mode = "test"
+hint = "Compare key with slot->key to choose a side, walk left-root-right, and compute height as 1 + max of the two subtree heights."
+
+[[exercises]]
+name = "cpp33_complex"
+path = "exercises/04_cpp_advanced/cpp33_complex.cpp"
+mode = "test"
+hint = "Also add other.im_ in operator+=, and in operator<< print '-' with -value.im_ when the imaginary part is negative."
+
+[[exercises]]
+name = "cpp34_matrix"
+path = "exercises/04_cpp_advanced/cpp34_matrix.cpp"
+mode = "test"
+hint = "Throw std::invalid_argument unless cols_ == other.rows_, and sum data_[i][k] * other.data_[k][j] over every k."
+
+[[exercises]]
+name = "cpp35_shapes"
+path = "exercises/04_cpp_advanced/cpp35_shapes.cpp"
+mode = "test"
+hint = "Make area() and name() pure virtual in Shape and mark both subclass definitions override."
+
+[[exercises]]
+name = "cpp36_error_handling"
+path = "exercises/04_cpp_advanced/cpp36_error_handling.cpp"
+mode = "test"
+hint = "Throw InvalidArgument, NotFound and std::overflow_error; check capacity before writing; declare is_even noexcept."
+
+[[exercises]]
+name = "cpp37_modern_idioms"
+path = "exercises/04_cpp_advanced/cpp37_modern_idioms.cpp"
+mode = "test"
+hint = "Return {lo, hi}, switch on code / 100 declared inside the switch, and pass value to std::bitset<8> without shifting."
+
+[[exercises]]
+name = "cpp38_wordcount"
+path = "exercises/04_cpp_advanced/cpp38_wordcount.cpp"
+mode = "test"
+hint = "Keep only isalpha bytes, lowercase them, and sort by count descending with the word ascending as the tie-break."
