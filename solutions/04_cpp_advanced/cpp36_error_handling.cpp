@@ -4,8 +4,7 @@
 // specific failure. noexcept promises that leaving the function by exception
 // terminates the program, which is what move constructors and destructors need.
 //
-// Coming from TypeScript: `throw` is untyped and callers are not forced to
-// care. Here the type of the exception is the error taxonomy, and the strong
+// Note: the type of the exception is the error taxonomy, and the strong
 // guarantee (a failed operation changes nothing) is a per-class promise.
 #include "cztest.h"
 

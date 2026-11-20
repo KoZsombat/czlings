@@ -2,10 +2,9 @@
 // compared with ==, combined with + and +=, and streamed with <<. Making the
 // stream operator a friend gives it access to the representation.
 //
-// Coming from TypeScript: `+` can only be overloaded through a differently
-// named method, and `==` on objects compares references unless you write it.
-// Here operator+ returns a new value, operator+= mutates and returns *this, and
-// operator<< is found by argument-dependent lookup.
+// Note: operator+ returns a new value, operator+= mutates and returns *this,
+// and operator<< is found by argument-dependent lookup because it is declared
+// next to the class.
 #include "cztest.h"
 
 #include <ostream>

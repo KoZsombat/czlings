@@ -1,9 +1,9 @@
 // std::map keeps keys sorted (red-black tree), std::unordered_map hashes them,
 // std::set is a sorted set of unique keys.
 //
-// Coming from TypeScript: a Map iterates in insertion order; std::map iterates
-// in key order no matter what you inserted first, which is what makes output
-// deterministic. unordered_map has no defined iteration order at all.
+// Note: std::map iterates in key order no matter what you inserted first, which
+// is what makes output deterministic. unordered_map has no defined iteration
+// order at all.
 #include "cztest.h"
 
 #include <map>

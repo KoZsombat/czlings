@@ -1,9 +1,9 @@
 // std::vector: contiguous storage, size vs capacity, insert/erase, and the
 // iterator-invalidation trap.
 //
-// Coming from TypeScript: Array#splice is safe inside a loop because you index
-// the array; a vector iterator is a pointer into the buffer, and erase() moves
-// every later element down one, so the old iterators point at the wrong slot.
+// Note: a vector iterator is a pointer into the buffer, and erase() moves every
+// later element down one, so the old iterators point at the wrong slot. The
+// iterator returned by erase() is the only valid way to continue.
 //
 // Task: keep_even returns a copy with only even values; erase_odds removes odd
 // values in place without ever using an invalidated iterator or index.

@@ -3,9 +3,9 @@
  * Task: sum 1..n with a for loop, count decimal digits with a do-while (zero
  * has one digit), and reverse the digits of a nonnegative int with a while.
  *
- * Coming from TypeScript: the loops look familiar, but integer division
- * `n / 10` drops the last digit and `n % 10` extracts it; there is no
- * Number.prototype.toString trick here.
+ * Note: for a nonnegative int, `n % 10` extracts the last decimal digit and
+ * `n / 10` drops it; both are integer operations, with no string conversion
+ * involved.
  */
 #include "cztest.h"
 

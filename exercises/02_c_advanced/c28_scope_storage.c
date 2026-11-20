@@ -5,10 +5,9 @@
  * outer y.  fresh_counter() shows that an automatic local starts over each
  * call.
  *
- * Coming from TypeScript: module variables are not the same as C file scope,
- * and closures do not exist here.  A block-scope local is recreated on every
- * call; a `static` local is one object with program lifetime, initialised
- * once; an inner declaration shadows the outer one until its block ends.
+ * Note: a block-scope local is recreated on every call; a `static` local is
+ * one object with program lifetime, initialised once; an inner declaration
+ * shadows the outer one until its block ends.
  */
 #include "cztest.h"
 

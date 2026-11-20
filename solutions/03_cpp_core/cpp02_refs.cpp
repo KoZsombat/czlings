@@ -1,9 +1,8 @@
 // cpp02_refs -- references are aliases; pointers are addresses.
 //
-// Coming from TypeScript: objects are shared by reference, but assigning a
-// variable rebinds it. A C++ reference is another name for the *same* object
-// and can never be rebound or null. `const T&` passes a large value without
-// copying and promises not to modify it.
+// Note: a C++ reference is another name for an existing object; it can never
+// be rebound or null. `const T&` passes a large value without copying and
+// promises not to modify it.
 
 #include <cctype>
 #include <string>

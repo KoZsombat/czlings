@@ -2,10 +2,9 @@
 // then emit a report ordered by count (descending) with ties broken
 // alphabetically by a custom comparator. Only [a-z] letters reach the map.
 //
-// Coming from TypeScript: splitting, lowercasing and Map iteration are a few
-// method calls with no fixed order guarantee. Here the stream extraction skips
-// whitespace, std::map is already sorted by key, and the tie-break order is
-// whatever your comparator says — so the report is byte-for-byte deterministic.
+// Note: stream extraction skips whitespace, std::map is already sorted by key,
+// and the tie-break order is whatever your comparator says — so the report is
+// byte-for-byte deterministic.
 #include "cztest.h"
 
 #include <algorithm>

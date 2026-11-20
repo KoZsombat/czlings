@@ -1,9 +1,9 @@
 // Lambdas capture by value (a snapshot) or by reference (an alias); `mutable`
 // lets a value capture change, and std::function stores any matching callable.
 //
-// Coming from TypeScript: a closure keeps a live binding to `let`; a C++
-// lambda capturing by value snapshots it, and a returned lambda holding a
-// reference capture dangles like a pointer into a dead stack frame.
+// Note: a lambda capturing by value snapshots the variable at creation time,
+// while capturing by reference keeps a pointer, so a returned lambda that
+// captured a local by reference dangles.
 //
 // Task: make_counter counts 1, 2, 3... across calls; make_adder adds a fixed
 // base; sort_by_abs orders by absolute value; the reference capture must

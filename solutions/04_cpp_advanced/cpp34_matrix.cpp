@@ -2,10 +2,9 @@
 // for element access (the double form is the convention), operator* that
 // refuses mismatched dimensions, and const-correct member functions.
 //
-// Coming from TypeScript: arrays have no const view and no dimension contract;
-// here the const overload of operator() is a different function, so a const
+// Note: the const overload of operator() is a different function, so a const
 // Matrix cannot hand out a mutable reference, and a broken multiply throws
-// instead of producing NaN-shaped garbage.
+// instead of producing garbage.
 #include "cztest.h"
 
 #include <cstddef>

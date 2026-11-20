@@ -1,8 +1,7 @@
 // cpp04_class_basic -- a class with private state and const member functions.
 //
-// Coming from TypeScript: `private` exists, but `const` methods do not. Here a
-// const Rectangle (or a const reference to one) may only call const member
-// functions, so every read-only getter must be marked const.
+// Note: a const Rectangle (or a const reference to one) may only call const
+// member functions, so every read-only getter must be marked const.
 
 #include <string>
 

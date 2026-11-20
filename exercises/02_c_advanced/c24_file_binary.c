@@ -4,9 +4,9 @@
  * divides the file size by sizeof(Record), and read_last() so it seeks to the
  * final record and reads it.  Use fseek/ftell for positions.
  *
- * Coming from TypeScript: a binary file is not JSON; the bytes are the in-memory
- * representation, padding included, and are not portable between builds.
- * fread() returns the number of complete items read, which may be short.
+ * Note: the bytes written are the in-memory representation, padding included,
+ * so the file is not portable between builds.  fread() returns the number of
+ * complete items read, which may be short.
  */
 #include "cztest.h"
 #include <stddef.h>

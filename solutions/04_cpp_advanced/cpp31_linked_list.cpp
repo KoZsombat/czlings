@@ -2,10 +2,8 @@
 // std::unique_ptr: no manual delete, and the whole chain is freed when the head
 // pointer is destroyed.
 //
-// Coming from TypeScript: `{ value, next }` objects are collected by the GC,
-// and a cycle is a leak. Here ownership is in the type: the list owns the head,
-// each node owns the next, and reverse() is a loop of moves that never copies a
-// node.
+// Note: ownership is in the type: the list owns the head, each node owns the
+// next, and reverse() is a loop of moves that never copies a node.
 #include "cztest.h"
 
 #include <memory>

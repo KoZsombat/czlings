@@ -1,10 +1,9 @@
 // Value types with operators: Complex is copied, compared with ==, combined
 // with + and +=, and streamed with <<. The stream operator is a friend.
 //
-// Coming from TypeScript: `+` is not overloadable and `==` on objects compares
-// references unless written. Here operator+ returns a new value, operator+=
-// mutates and returns *this, and operator<< is found by argument-dependent
-// lookup because it is declared next to the class.
+// Note: operator+ returns a new value, operator+= mutates and returns *this,
+// and operator<< is found by argument-dependent lookup because it is declared
+// next to the class.
 //
 // Task: fix operator+= (both components) and make operator<< print
 // "re+imi", using '-' when the imaginary part is negative.

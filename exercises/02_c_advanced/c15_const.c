@@ -9,9 +9,9 @@
  *   int *const p          const pointer: p cannot be assigned
  *   const int *const p    neither p nor *p may be assigned
  *
- * Coming from TypeScript: C const is part of the type and does not imply a
- * deep freeze, but it is checked at compile time.  Unlike TS `readonly`, the
- * position around `*` chooses between "the pointee" and "the pointer".
+ * Note: const is checked at compile time only; it does not freeze memory, and
+ * another pointer may still change the same object.  Its position around `*`
+ * chooses between "the pointee" and "the pointer".
  */
 #include "cztest.h"
 #include <stddef.h>

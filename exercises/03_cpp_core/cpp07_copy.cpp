@@ -1,9 +1,8 @@
 // cpp07_copy -- the rule of three: deep copies for an owning class.
 //
-// Coming from TypeScript: `const b = a` copies the reference, so both names
-// see one object. C++ copies by value, and the compiler-generated copy is
-// memberwise: two objects would own one allocation. You must write the copy
-// constructor and copy assignment yourself (with the destructor: rule of three).
+// Note: C++ copies by value, and the compiler-generated copy is memberwise:
+// two objects would own one allocation. You must write the copy constructor
+// and copy assignment yourself (with the destructor: rule of three).
 //
 // Task: both copies allocate their own buffer, copy every element, resize the
 // target, and survive `x = x`.

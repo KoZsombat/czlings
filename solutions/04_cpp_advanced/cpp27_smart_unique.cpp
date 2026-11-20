@@ -1,9 +1,8 @@
 // std::unique_ptr is exclusive ownership: it deletes exactly once, cannot be
 // copied, and std::move hands the pointer over leaving the source null.
 //
-// Coming from TypeScript: the GC decides when an object dies, so "ownership"
-// never appears in the type. Here the type states it: unique_ptr means one
-// owner, and a moved-from unique_ptr is a null pointer, not an empty object.
+// Note: the type states ownership: a unique_ptr has exactly one owner, and a
+// moved-from unique_ptr is a null pointer, not an empty object.
 #include "cztest.h"
 
 #include <memory>

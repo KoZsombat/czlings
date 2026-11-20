@@ -1,9 +1,8 @@
 // cpp10_friend -- friend functions and friend classes.
 //
-// Coming from TypeScript: `private` is enforced by the class body, and a
-// subclass cannot read private fields either. C++ friendship is an explicit
-// one-way grant: the friend may touch private members. It is *not* inherited,
-// so a class derived from Calibrator could not read Meter::value_ either.
+// Note: C++ friendship is an explicit one-way grant: the friend may touch
+// private members. It is *not* inherited, so a class derived from Calibrator
+// could not read Meter::value_ either.
 
 #include <ostream>
 #include <sstream>

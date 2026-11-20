@@ -4,8 +4,8 @@
  * row by row, so m[r][c] sits at offset r * 3 + c; a 2D parameter needs the
  * column count in its type, and the loops must cover every row and column.
  *
- * Coming from TypeScript: these are contiguous fixed-size arrays, not
- * arrays of array objects, and they cannot be ragged or resized.
+ * Note: a fixed-size 2D array is one contiguous block of rows, not an array
+ * of separate row objects; it cannot be ragged or resized.
  */
 #include "cztest.h"
 

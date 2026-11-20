@@ -4,9 +4,9 @@
  * (or -1), and reverse() swap from both ends until the pointers meet.  The
  * address `values + n` is one-past-the-end and may be formed, never read.
  *
- * Coming from TypeScript: pointer arithmetic is scaled by sizeof(element) and
- * C never checks bounds.  Subtracting two pointers is defined only when both
- * point into the same array; the result is a ptrdiff_t, not a number of bytes.
+ * Note: pointer arithmetic is scaled by sizeof(element) and C never checks
+ * bounds.  Subtracting two pointers is defined only when both point into the
+ * same array; the result is a ptrdiff_t, not a number of bytes.
  */
 #include "cztest.h"
 #include <stddef.h>

@@ -2,9 +2,8 @@
 // then emit a report ordered by count (descending) with ties broken
 // alphabetically. Only [a-z] letters reach the map.
 //
-// Coming from TypeScript: split/lowercase/Map iteration are method calls with
-// no fixed order. Here extraction skips whitespace, std::map is key-sorted, and
-// the comparator fixes the tie-break, so the report is deterministic.
+// Note: stream extraction skips whitespace, std::map is key-sorted, and the
+// comparator fixes the tie-break, so the report is deterministic.
 //
 // Task: count_words lowercases and drops non-letters ("The" and "the," become
 // one word); ranked orders by count descending, then word ascending; report

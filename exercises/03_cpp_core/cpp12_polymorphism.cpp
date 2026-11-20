@@ -1,8 +1,8 @@
 // cpp12_polymorphism -- virtual dispatch through a base pointer.
 //
-// Coming from TypeScript: methods dispatch dynamically by default. In C++ only
-// functions declared `virtual` do; otherwise the static type wins. Deleting
-// through a base pointer also requires a virtual destructor.
+// Note: in C++ only functions declared `virtual` dispatch dynamically;
+// otherwise the static type wins. Deleting through a base pointer also
+// requires a virtual destructor.
 //
 // Task: make area/name virtual in Shape so a Shape* reaches Circle/Square, and
 // make ~Shape virtual so Tracked's destructor runs on delete.

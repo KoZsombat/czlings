@@ -5,10 +5,11 @@
  * slot() returns the address of a local; checked_add() performs signed
  * overflow.  Make all four behave as the tests require.
  *
- * Coming from TypeScript: locals are not zero-initialised, array access is
- * never bounds-checked, returning a pointer to a local leaves it dangling,
- * and signed overflow is undefined behaviour (not wraparound).  Use
- * <limits.h> and test before adding.
+ * Note: reading an uninitialised local, indexing past the end of an array,
+ * and returning the address of a local are all undefined behaviour; the
+ * returned pointer dangles once the function returns.  Signed integer
+ * overflow is also undefined behaviour, not wraparound: the result cannot be
+ * relied on.  <limits.h> provides INT_MAX and INT_MIN for bounds checks.
  */
 #include "cztest.h"
 #include <limits.h>

@@ -10,10 +10,11 @@
 // Both insert and erase throw std::out_of_range on an invalid index, and
 // insert accepts index == size() (append).
 //
-// Coming from TypeScript: `reserve` is not `array.length = n`; it allocates a
-// new buffer and migrates elements, which invalidates every pointer, reference
-// and iterator into the old buffer. insert/erase are the O(n) `splice`/`shift`
-// operations you know, but nothing tracks those invalidated handles for you.
+// Note: reserve(n) only allocates storage and leaves the size alone. Growing
+// allocates a new buffer and moves the elements into it, which invalidates
+// every pointer, reference and iterator into the old buffer. insert() and
+// erase() shift the tail by one, so both are O(n) and invalidate iterators at
+// or after the position they touch.
 #include "cztest.h"
 
 #include <cstddef>

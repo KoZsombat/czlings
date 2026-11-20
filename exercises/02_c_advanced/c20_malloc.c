@@ -4,8 +4,9 @@
  * capacity when full.  Keep the pointer returned by realloc, because the old
  * block may have moved.  vec_free() must return the vector to empty.
  *
- * Coming from TypeScript: there is no garbage collector.  Every allocation
- * needs a free, realloc can move the block, and data[len] is not checked.
+ * Note: C never frees memory for you: every successful allocation must
+ * eventually be freed, realloc can move the block, and accessing data[len] is
+ * not bounds-checked.
  */
 #include "cztest.h"
 #include <stdlib.h>

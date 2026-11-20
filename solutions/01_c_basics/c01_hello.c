@@ -4,9 +4,9 @@
  * returns the number of characters snprintf would have written, even when the
  * buffer is too small to hold the whole string.
  *
- * Coming from TypeScript: a C string is a fixed char buffer, not a growable
- * string object. The caller supplies the capacity, and snprintf never writes
- * past it; its return value is the untruncated length.
+ * Note: a C string is a fixed char buffer whose capacity the caller supplies.
+ * snprintf never writes past that capacity, and its return value is the
+ * length the full, untruncated output would have had.
  */
 #include "cztest.h"
 #include <stddef.h>

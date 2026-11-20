@@ -1,7 +1,6 @@
 // cpp16_new_delete -- owning a dynamic array.
 //
-// Coming from TypeScript: the garbage collector frees arrays; JS has no manual
-// delete. In C++ `new T[n]` must be matched by `delete[]`, and an object that
+// Note: in C++ `new T[n]` must be matched by `delete[]`, and an object that
 // owns that buffer must free it in its destructor. `std::vector<int>` does
 // exactly this and is the normal choice; here you build the mechanism once.
 

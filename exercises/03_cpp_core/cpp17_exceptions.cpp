@@ -1,9 +1,9 @@
 // cpp17_exceptions -- throw, catch, custom exceptions, stack unwinding.
 //
-// Coming from TypeScript: `throw`/`catch` look familiar, but C++ destroys every
-// fully constructed local between the throw and the matching catch, in reverse
-// order. That unwinding is what makes RAII safe. Catch exceptions by const
-// reference; a custom exception derives from std::runtime_error.
+// Note: C++ destroys every fully constructed local between the throw and the
+// matching catch, in reverse order. That unwinding is what makes RAII safe.
+// Catch exceptions by const reference; a custom exception derives from
+// std::runtime_error.
 //
 // Task: throw ValidationError("age must be positive") for negative ages and
 // ValidationError("age is unrealistic") above 150; valid ages return normally.

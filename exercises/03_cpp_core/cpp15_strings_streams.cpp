@@ -1,9 +1,8 @@
 // cpp15_strings_streams -- std::string, istringstream, stoi/stod, string_view.
 //
-// Coming from TypeScript: `parseInt("12x")` is 12 and `Number("abc")` is NaN.
-// C++ stoi/stod throw on failure and stop at the first non-numeric character,
-// so check how much was consumed. std::string_view is a non-owning window: no
-// copy, and the buffer must outlive it.
+// Note: C++ stoi/stod throw on failure and stop at the first non-numeric
+// character, so check how much was consumed. std::string_view is a non-owning
+// window: no copy, and the buffer must outlive it.
 //
 // Task: parse one record ("word count price"), convert with a fallback on
 // malformed input, and return the first space-delimited token as a view.

@@ -5,9 +5,9 @@
  * failure instead of overflowing, and format_id() must build "id:<number>"
  * with snprintf, returning the length the full result would need.
  *
- * Coming from TypeScript: strings are not immutable values with automatic
- * growth.  strlen() scans for '\0', strncpy() does not promise a terminator,
- * and snprintf() returns the would-be length, which may exceed the buffer.
+ * Note: strlen() scans for '\0', strncpy() does not promise a terminator, and
+ * snprintf() returns the length the full result would need, which may exceed
+ * the buffer.
  */
 #include "cztest.h"
 #include <stdio.h>

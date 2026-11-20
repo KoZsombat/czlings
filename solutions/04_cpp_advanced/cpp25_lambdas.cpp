@@ -2,10 +2,9 @@
 // aliases the local, `mutable` lets a value capture be modified, and
 // std::function stores any callable with the matching signature (type erasure).
 //
-// Coming from TypeScript: closing over a `let` keeps a live binding to the
-// variable. A C++ lambda capturing by value snapshots it; capturing by
-// reference keeps a pointer, so a returned lambda that captured a local by
-// reference dangles exactly like a JS closure over a loop variable would not.
+// Note: a lambda capturing by value snapshots the variable at creation time;
+// capturing by reference keeps a pointer, so a returned lambda that captured a
+// local by reference dangles.
 #include "cztest.h"
 
 #include <algorithm>

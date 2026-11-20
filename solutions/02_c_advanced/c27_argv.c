@@ -4,8 +4,7 @@
  * argv[0] is the program name.  Keep the required main signature and build
  * fake argument arrays in main() to test it.
  *
- * Coming from TypeScript: process.argv is an ordinary array of strings, while
- * C gives you a pointer to pointers terminated only by argc (plus a NULL
+ * Note: argv is a pointer to pointers terminated only by argc (plus a NULL
  * sentinel by convention).  Compare strings with strcmp; `==` compares
  * addresses, not contents.
  */

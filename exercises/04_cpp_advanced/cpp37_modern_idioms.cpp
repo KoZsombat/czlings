@@ -2,8 +2,8 @@
 // initializer, std::array (fixed size, no pointer decay), std::bitset (fixed
 // width), and [[nodiscard]] (dropping the result warns).
 //
-// Coming from TypeScript: switch cannot declare its scrutinee, no attribute
-// turns a dropped return value into a warning, and arrays are ordinary objects;
+// Note: `switch` can declare its scrutinee in C++17, attributes such as
+// [[nodiscard]] turn a dropped return value into a compiler warning, and
 // std::array carries its length in the type.
 //
 // Task: min_max returns {smallest, largest}; describe_status maps the hundreds

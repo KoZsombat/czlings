@@ -1,10 +1,9 @@
 // cpp07_copy -- the rule of three: deep copies for an owning class.
 //
-// Coming from TypeScript: `const b = a` copies the reference, so both names
-// see one object. C++ copies by value, and the compiler-generated copy is
-// memberwise: for a raw pointer that means two objects own one allocation
-// (double free, double mutation). You must write the copy constructor and
-// copy assignment yourself.
+// Note: C++ copies by value, and the compiler-generated copy is memberwise:
+// for a raw pointer that means two objects own one allocation (double free,
+// double mutation). You must write the copy constructor and copy assignment
+// yourself.
 
 #include "cztest.h"
 

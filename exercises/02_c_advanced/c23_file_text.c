@@ -4,9 +4,9 @@
  * fgets(), and count_words() count whitespace-separated words.  Both counters
  * must rewind the stream before reading and leave it rewound afterwards.
  *
- * Coming from TypeScript: file access is byte-oriented and returns counts or
- * error codes, not promises.  fgets() keeps the trailing newline, EOF is an
- * int value, and a read can fail partway through.
+ * Note: stdio calls return counts or error codes.  fgets() keeps the trailing
+ * newline, EOF is an int value distinct from any char, and a read can fail
+ * partway through.
  */
 #include "cztest.h"
 #include <ctype.h>

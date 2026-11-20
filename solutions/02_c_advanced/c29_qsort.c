@@ -4,9 +4,9 @@
  * order, and cmp_str() so it orders the pointed-to strings.  bsearch uses the
  * same comparator, so the array must already be sorted by it.
  *
- * Coming from TypeScript: you pass a function pointer, not a closure, and it
- * receives const void * arguments.  The comparator must describe a consistent
- * total order; returning a - b can overflow, so compare with > and < instead.
+ * Note: you pass a plain function pointer, and it receives `const void *`
+ * arguments.  The comparator must describe a consistent total order;
+ * returning a - b can overflow, so compare with > and < instead.
  */
 #include "cztest.h"
 #include <stdlib.h>

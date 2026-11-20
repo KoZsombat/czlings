@@ -2,8 +2,7 @@
 // [first, last). A function template that only uses ++, *, != and == works on
 // vector, list and set alike.
 //
-// Coming from TypeScript: iterables hide the cursor and re-read the array;
-// here the iterator is the cursor, so std::distance may walk a list in O(n)
+// Note: the iterator is the cursor, so std::distance may walk a list in O(n)
 // while a vector does it in O(1), and reverse iterators are a separate type.
 #include "cztest.h"
 

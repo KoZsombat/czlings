@@ -2,9 +2,9 @@
 // storage size per T and N. push() throws std::overflow_error when full;
 // pop() and top() throw std::out_of_range when empty.
 //
-// Coming from TypeScript: class Stack<T> holds anything with one runtime shape;
-// here type and capacity are compile-time facts, and an empty pop() must throw
-// instead of returning undefined.
+// Note: type and capacity are compile-time arguments, so FixedStack<int, 3> and
+// FixedStack<std::string, 3> are distinct types with differently sized storage.
+// An empty pop() has no value to return, so it throws.
 #include "cztest.h"
 
 #include <array>

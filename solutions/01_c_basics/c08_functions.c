@@ -4,8 +4,8 @@
  * own copies, so it cannot swap the caller's variables. Fix the pairing
  * operation by returning a struct Pair with the fields exchanged.
  *
- * Coming from TypeScript: all C arguments are passed by value (objects are
- * not shared by reference); to send data back, return it or pass a pointer.
+ * Note: all C arguments are passed by value, so a function only ever sees
+ * copies; to send data back, return it or pass a pointer.
  */
 #include "cztest.h"
 

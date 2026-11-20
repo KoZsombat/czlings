@@ -2,9 +2,9 @@
 // cannot produce a value throws, and the exception type carries the reason. A
 // custom hierarchy lets a caller catch one base or one specific failure.
 //
-// Coming from TypeScript: `throw` is untyped and callers are not forced to
-// care. Here the type is the error taxonomy, `noexcept` marks functions that
-// must not unwind, and a failed operation can promise to change nothing.
+// Note: the type of the exception is the error taxonomy, `noexcept` marks
+// functions that must not unwind, and a failed operation can promise to change
+// nothing.
 //
 // Task: to_positive throws InvalidArgument for non-positive input;
 // find_index throws NotFound when absent; FixedBuffer::push throws

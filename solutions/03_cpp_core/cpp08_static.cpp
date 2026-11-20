@@ -1,8 +1,8 @@
 // cpp08_static -- static data members, static functions, class constants.
 //
-// Coming from TypeScript: `static` fields live on the class too, but in C++
-// you must *define* a non-const static data member outside the class body.
-// Static member functions have no `this` and cannot touch instance members.
+// Note: C++ requires you to *define* a non-const static data member outside
+// the class body. Static member functions have no `this` and cannot touch
+// instance members.
 
 #include "cztest.h"
 

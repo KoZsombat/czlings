@@ -2,9 +2,9 @@
 // element access, operator* that refuses mismatched dimensions, const
 // overloads. A const Matrix cannot hand out a mutable reference.
 //
-// Coming from TypeScript: arrays have no const view and no dimension contract;
-// here the const overload is a different function, and a broken multiply throws
-// instead of producing NaN-shaped garbage.
+// Note: the const overload is a different function, so a const Matrix cannot
+// hand out a mutable reference, and a broken multiply throws instead of
+// producing garbage.
 //
 // Task: operator* must accumulate over the inner dimension and throw
 // std::invalid_argument when cols() != other.rows().

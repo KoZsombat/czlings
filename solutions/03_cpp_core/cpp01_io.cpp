@@ -1,8 +1,7 @@
 // cpp01_io -- format text with std::ostringstream.
 //
-// Coming from TypeScript: `${name}: ${score}/100` interpolates anything.
-// C++ has no template literals: `<<` inserts values into a stream, and
-// formatting (fixed notation, precision) is a property of that stream.
+// Note: C++ has no string interpolation. `<<` inserts values into a stream,
+// and formatting (fixed notation, precision) is a property of that stream.
 
 #include <iomanip>
 #include <iostream>

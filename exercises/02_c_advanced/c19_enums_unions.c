@@ -4,10 +4,10 @@
  * both members start at the same address, and give Flags a 3-bit `a` and a
  * 5-bit `b`.  Add the missing blue case to color_name().
  *
- * Coming from TypeScript: enum members are plain integers, not strings or
- * objects.  A union makes several members share bytes, and bitfields pack
- * narrow integers into a word.  Only the shared-start rule is guaranteed;
- * padding and bit order are implementation-defined, so never print raw bytes.
+ * Note: enum members are plain integers, not strings or objects.  A union
+ * makes its members share bytes, and bitfields pack narrow integers into a
+ * word.  Only the shared start address is guaranteed; padding and bit order are
+ * implementation-defined, so never print raw bytes.
  */
 #include "cztest.h"
 #include <stddef.h>

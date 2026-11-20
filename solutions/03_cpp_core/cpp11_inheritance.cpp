@@ -1,9 +1,8 @@
 // cpp11_inheritance -- base and derived classes, protected, name hiding.
 //
-// Coming from TypeScript: `extends` and `super(...)` exist, but C++ requires
-// the base constructor call in the derived initializer list; there is no
-// implicit super(). A derived function with the same name *hides* the base
-// one; call it explicitly with Base::name().
+// Note: C++ requires the base constructor call in the derived initializer
+// list; there is no implicit super(). A derived function with the same name
+// *hides* the base one; call it explicitly with Base::name().
 
 #include <string>
 

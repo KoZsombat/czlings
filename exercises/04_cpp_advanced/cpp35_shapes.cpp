@@ -1,9 +1,8 @@
 // An abstract Shape base with pure virtual area()/name() and a virtual
 // destructor, plus a container of std::unique_ptr<Shape> sorted by area.
 //
-// Coming from TypeScript: `interface Shape` is structural and methods dispatch
-// dynamically for free. In C++ the base must declare `virtual`, and a missing
-// virtual destructor makes deleting through Shape* undefined behaviour.
+// Note: the base must declare `virtual`, and a missing virtual destructor makes
+// deleting through Shape* undefined behaviour.
 //
 // Task: make area() and name() pure virtual in Shape and override them in both
 // subclasses, so every call through a Shape& reaches the real implementation.

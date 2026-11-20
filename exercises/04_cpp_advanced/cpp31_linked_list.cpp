@@ -1,9 +1,8 @@
 // A singly linked list where each node is owned by exactly one
 // std::unique_ptr: no manual delete, and the chain dies with the head pointer.
 //
-// Coming from TypeScript: `{ value, next }` objects live until the GC decides,
-// so ownership never appears in the code. Here the list owns the head and each
-// node owns the next, so reverse() is a loop of moves, not copies.
+// Note: ownership is in the type: the list owns the head and each node owns the
+// next, so reverse() is a loop of moves, not copies.
 //
 // Task: push_front inserts at the front in O(1); to_vector reads top to bottom;
 // reverse() relinks the nodes so the order flips and no node leaks.

@@ -4,9 +4,9 @@
  * width * height, and make_rect() so it keeps both corners.  A struct is
  * returned by value: the caller gets its own copy.
  *
- * Coming from TypeScript: a struct is a value type, not a reference.  `p = q`
- * copies every field, and passing a struct to a function copies it too.  Use
- * a pointer when the callee must update the caller's object.
+ * Note: a struct has value semantics: `p = q` copies every field, and passing
+ * a struct to a function copies it too.  Use a pointer when the callee must
+ * update the caller's object.
  */
 #include "cztest.h"
 

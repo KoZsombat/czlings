@@ -1,9 +1,8 @@
 // Full specialization: Printer<T> has a generic definition, and Printer<bool>
 // should have a hand-written one.
 //
-// Coming from TypeScript: a generic function has exactly one body for every
-// type. C++ lets you replace the body for chosen types, and the choice happens
-// at compile time.
+// Note: the generic body serves every type unless a full specialization for
+// that exact type is declared, and the compiler picks one at compile time.
 //
 // Task: add a full specialization for bool that formats true/false instead of
 // 1/0. Place it above main: a specialization must be visible before the first

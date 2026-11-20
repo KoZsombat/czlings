@@ -1,8 +1,8 @@
 // cpp16_new_delete -- owning a dynamic array.
 //
-// Coming from TypeScript: the garbage collector frees arrays. In C++ `new T[n]`
-// must be matched by `delete[]`, and an owning object frees it in its
-// destructor. `std::vector<int>` does exactly this and is the normal choice.
+// Note: in C++ `new T[n]` must be matched by `delete[]`, and an owning object
+// frees it in its destructor. `std::vector<int>` does exactly this and is the
+// normal choice.
 //
 // Task: complete the destructor: delete[] the buffer and update the live
 // counter. Copying is disabled so there is exactly one owner.

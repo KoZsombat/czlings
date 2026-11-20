@@ -1,10 +1,10 @@
 // cpp18_move -- move constructor and move assignment.
 //
-// Coming from TypeScript: no move semantics; assignment copies a reference.
-// `std::move(x)` is just a cast to an rvalue reference that lets overload
-// resolution pick a move constructor, which steals x's buffer. The moved-from
-// object must stay destructible and assignable. Moves should be noexcept. With
-// copy AND move operations plus a destructor this is the rule of five.
+// Note: `std::move(x)` is just a cast to an rvalue reference that lets
+// overload resolution pick a move constructor, which steals x's buffer. The
+// moved-from object must stay destructible and assignable. Moves should be
+// noexcept. With copy AND move operations plus a destructor this is the rule
+// of five.
 //
 // Task: add the move constructor and move assignment: steal the buffer, set the
 // source to size 0 / nullptr, and increment moves instead of copies.

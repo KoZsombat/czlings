@@ -1,8 +1,7 @@
 // cpp09_operators -- operator overloading.
 //
-// Coming from TypeScript: no operator overloading; `==` coerces. In C++ you
-// give your own types operator syntax, but keep the meaning intuitive: `+`
-// combines, `==` compares all state, `[]` indexes.
+// Note: C++ lets you give your own types operator syntax, but the meaning
+// should stay intuitive: `+` combines, `==` compares all state, `[]` indexes.
 //
 // Task: complete +, ==, != and += for Vec2, and return the requested element
 // from IntList::operator[] (as a reference, so assignment works).

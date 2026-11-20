@@ -4,8 +4,8 @@
  * integer power. Every recursive function needs a base case that stops the
  * descent, otherwise the call stack overflows.
  *
- * Coming from TypeScript: recursion is the same idea, but C has a small,
- * fixed stack; deep recursion crashes instead of throwing RangeError.
+ * Note: C has a small, fixed call stack; runaway recursion crashes the
+ * process rather than raising an exception.
  */
 #include "cztest.h"
 

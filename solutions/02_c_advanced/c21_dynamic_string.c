@@ -4,9 +4,9 @@
  * NULL or allocation fails.  join() must concatenate into one exact-size
  * buffer.  The caller owns every returned pointer.
  *
- * Coming from TypeScript: strings are not garbage-collected values.  A copy
- * needs strlen + 1 bytes (the terminator is part of the allocation), and the
- * caller must free it.  Returning a pointer into src would not be a copy.
+ * Note: a heap copy needs strlen(src) + 1 bytes because the terminator is part
+ * of the allocation, and the caller must free it.  Returning a pointer into
+ * src would not be a copy.
  */
 #include "cztest.h"
 #include <stdlib.h>

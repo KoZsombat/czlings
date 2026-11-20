@@ -3,9 +3,9 @@
 // Shape& or Shape* dispatch to the dynamic type because the functions are
 // virtual; deleting through Shape* is safe only because ~Shape is virtual.
 //
-// Coming from TypeScript: `interface Shape` is structural and methods are
-// looked up dynamically for free. In C++ the base must declare `virtual`, and a
-// missing virtual destructor makes `delete base_ptr` undefined behaviour.
+// Note: the base must declare `virtual` for every function that should dispatch
+// dynamically, and a missing virtual destructor makes `delete base_ptr`
+// undefined behaviour.
 #include "cztest.h"
 
 #include <algorithm>

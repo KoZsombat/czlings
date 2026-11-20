@@ -1,8 +1,8 @@
 // A binary search tree of std::unique_ptr<Node>: insert, contains, in-order
 // walk, height. The destructor is the compiler's; each node frees its subtree.
 //
-// Coming from TypeScript: nullable child fields plus the GC; here
-// std::unique_ptr<Node> is the nullable link and ownership mirrors the tree.
+// Note: std::unique_ptr<Node> is the nullable link and ownership mirrors the
+// tree, so no delete is written anywhere.
 //
 // Task: keep left < key < right (duplicates ignored), so in_order() is sorted
 // and height() counts nodes on the longest root-to-leaf path (empty tree 0).

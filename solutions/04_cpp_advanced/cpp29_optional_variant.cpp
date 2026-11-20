@@ -1,10 +1,9 @@
 // std::optional<T> is "a T or nothing"; std::variant<A, B, C> is "exactly one
 // of A, B, C". Both replace the sentinel values C++ code used to invent.
 //
-// Coming from TypeScript: `undefined`/`null` are values any type can hold and
-// `A | B` is a type-level union checked by the compiler. optional is an
-// object with a flag you inspect, and variant's alternatives are checked at
-// runtime with holds_alternative/get, or handled uniformly with std::visit.
+// Note: optional stores its value plus a flag you inspect, and variant's
+// alternatives are checked at runtime with holds_alternative/get, or handled
+// uniformly with std::visit.
 #include "cztest.h"
 
 #include <cstddef>

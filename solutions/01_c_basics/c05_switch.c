@@ -4,8 +4,8 @@
  * to 1 for an unknown operator or division by zero; otherwise set it to 0.
  * Each case needs its own break, or execution falls into the next case.
  *
- * Coming from TypeScript: C switch is not scoped per case and does not stop
- * automatically; fallthrough is the default, and break is required.
+ * Note: cases in a C switch share one scope and do not stop on their own;
+ * fallthrough is the default, so each case needs an explicit break.
  */
 #include "cztest.h"
 

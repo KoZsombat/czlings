@@ -1,9 +1,7 @@
 // cpp03_overload_default -- default arguments vs overloading.
 //
-// Coming from TypeScript: `f(a, b = 2)` is one function with an optional
-// parameter. C++ also allows that, but a *default argument* and a one-argument
-// overload both match `scaled(5)`, so the call is ambiguous and rejected at
-// compile time.
+// Note: a *default argument* and a one-argument overload both match
+// `scaled(5)`, so the call is ambiguous and rejected at compile time.
 
 #include <string>
 

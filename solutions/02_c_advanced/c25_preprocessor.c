@@ -4,10 +4,10 @@
  * CLAMP_ADD a do/while(0) body so it behaves as one statement, and select the
  * CZ_MODE_NAME branch for mode 2.
  *
- * Coming from TypeScript: a macro has no type checking and does not evaluate
- * its arguments once.  It is replaced literally, so missing parentheses change
- * precedence; a multi-statement macro breaks `if`/`else` unless wrapped in
- * do/while(0).  Prefer a static inline function when a function will do.
+ * Note: a macro is replaced literally and has no type checking, so it does not
+ * evaluate its arguments once, and missing parentheses change precedence.  A
+ * multi-statement macro breaks `if`/`else` unless wrapped in do/while(0).
+ * Prefer a static inline function when a function will do.
  */
 #include "cztest.h"
 

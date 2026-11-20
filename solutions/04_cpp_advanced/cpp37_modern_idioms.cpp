@@ -4,9 +4,8 @@
 // (fixed-width bit operations), and [[nodiscard]] (the compiler warns when a
 // return value is dropped).
 //
-// Coming from TypeScript: there is no attribute that turns a dropped return
-// value into a warning, `switch` cannot declare its scrutinee, and arrays are
-// the same object as any other Array — std::array carries its length in the
+// Note: [[nodiscard]] turns a dropped return value into a compiler warning,
+// `switch` can declare its scrutinee, and std::array carries its length in the
 // type.
 #include "cztest.h"
 

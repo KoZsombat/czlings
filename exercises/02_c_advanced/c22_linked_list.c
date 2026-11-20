@@ -4,9 +4,9 @@
  * make list_length() and list_sum() walk the whole chain, and make list_free()
  * release every node.  Freeing only the head leaks the rest.
  *
- * Coming from TypeScript: objects are garbage-collected and references keep
- * their targets alive.  Here each Node is a separate malloc; the `next`
- * pointer is the only link, so losing it loses the rest of the list.
+ * Note: each Node is a separate malloc and the `next` pointer is the only link
+ * to the rest of the list; overwriting it without freeing the target leaks
+ * every node after it.
  */
 #include "cztest.h"
 #include <stdlib.h>

@@ -4,9 +4,9 @@
  * the player with the highest score, and rename_player() so the stored name is
  * always terminated.  best() receives a read-only view and must not write.
  *
- * Coming from TypeScript: `p->score` means `(*p).score`; there is no implicit
- * dereference and no automatic null check.  A `const Player *` parameter
- * promises the caller that the struct will not be modified.
+ * Note: `p->score` is shorthand for `(*p).score`.  Nothing checks the pointer
+ * for NULL, and a `const Player *` parameter promises the caller that the
+ * struct will not be modified.
  */
 #include "cztest.h"
 #include <stddef.h>

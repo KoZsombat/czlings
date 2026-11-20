@@ -1,9 +1,8 @@
 // cpp14_namespaces -- namespaces, qualification, using-declarations.
 //
-// Coming from TypeScript: `namespace` is an older TS feature and modules are
-// the norm. A C++ `using namespace X;` is not an import: it drops every name
-// from X into the current scope, which invites ambiguity. Prefer qualified
-// names or a using-declaration for the one name you need.
+// Note: a C++ `using namespace X;` is not an import: it drops every name from
+// X into the current scope, which invites ambiguity. Prefer qualified names or
+// a using-declaration for the one name you need.
 
 #include <string>
 

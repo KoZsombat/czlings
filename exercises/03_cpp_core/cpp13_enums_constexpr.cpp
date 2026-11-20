@@ -1,9 +1,8 @@
 // cpp13_enums_constexpr -- enum class, constexpr, static_assert, auto.
 //
-// Coming from TypeScript: `const enum` and type-level computation exist, but
-// ordinary JS runs at runtime. C++ `constexpr` functions and variables are
-// evaluated by the compiler, `static_assert` checks them during the build, and
-// `enum class` values are scoped and do not implicitly convert to int.
+// Note: C++ `constexpr` functions and variables are evaluated by the compiler,
+// `static_assert` checks them during the build, and `enum class` values are
+// scoped and do not implicitly convert to int.
 //
 // Task: make sum_squares() actually square its input and complete color_name().
 

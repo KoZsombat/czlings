@@ -1,9 +1,8 @@
 // <algorithm> and <numeric> give you loops you do not have to write, but each
 // one takes a predicate or comparator with a precise meaning.
 //
-// Coming from TypeScript: Array#sort compares with a number-returning function
-// and is stable; std::sort takes a "less than" predicate returning bool, is not
-// stable, and reads the whole range through iterators.
+// Note: std::sort takes a "less than" predicate returning bool, is not stable,
+// and reads the whole range through iterators.
 //
 // Task: sort_descending orders largest first; first_negative returns the index
 // of the first negative value; count_above counts values > limit; total sums

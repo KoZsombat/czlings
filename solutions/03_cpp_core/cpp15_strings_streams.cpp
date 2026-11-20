@@ -1,8 +1,7 @@
 // cpp15_strings_streams -- std::string, istringstream, stoi/stod, string_view.
 //
-// Coming from TypeScript: `parseInt("12x")` returns 12 and `Number("abc")`
-// returns NaN. C++ `std::stoi`/`std::stod` throw on failure and stop at the
-// first non-numeric character, so check how much was consumed. A
+// Note: C++ `std::stoi`/`std::stod` throw on failure and stop at the first
+// non-numeric character, so check how much was consumed. A
 // std::string_view is a non-owning window: it does not copy and does not keep
 // the buffer alive.
 

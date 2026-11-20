@@ -5,10 +5,9 @@
  * pointers name, find_int() must return the address of the matching element,
  * and add_to() must update the int it is given.
  *
- * Coming from TypeScript: a C pointer is an address, not a reference.  `&x`
- * creates one and `*p` reads or writes the object it points to; nothing is
- * dereferenced automatically.  NULL is the closest thing to `undefined`, and
- * dereferencing it is undefined behaviour.
+ * Note: `&x` takes an object's address and `*p` reads or writes the object it
+ * points to; nothing is dereferenced for you, and dereferencing NULL is
+ * undefined behaviour.
  */
 #include "cztest.h"
 #include <stddef.h>

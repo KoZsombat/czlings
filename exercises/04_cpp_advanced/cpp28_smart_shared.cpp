@@ -2,9 +2,9 @@
 // A shared_ptr that points back up the graph creates a cycle that never drops
 // to zero, so the back-edge must be weak.
 //
-// Coming from TypeScript: a WeakRef/WeakMap is an occasional tool; here weak
-// ownership is the normal way to express "parent owns child, child refers to
-// parent", and use_count() makes the reference graph observable in tests.
+// Note: weak ownership is the normal way to express "parent owns child, child
+// refers to parent", and use_count() makes the reference graph observable in
+// tests.
 //
 // Task: link() stores child in parent->next (shared) and parent in
 // child->parent (weak). parent_name() goes through lock() so a dead parent

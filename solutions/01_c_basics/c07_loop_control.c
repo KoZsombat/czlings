@@ -4,8 +4,8 @@
  * limit by skipping the rest with continue, and sum the triangle table
  * (row r contains 1..r) using nested loops.
  *
- * Coming from TypeScript: break exits only the innermost loop, and continue
- * jumps to the next iteration; both behave the same as in JS.
+ * Note: break exits only the innermost loop, and continue jumps to the next
+ * iteration of the innermost loop.
  */
 #include "cztest.h"
 

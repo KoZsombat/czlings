@@ -4,10 +4,9 @@
  * only clears, is_power_of_two() so zero is rejected, and swap_nibbles() so
  * it swaps the two nibbles of the low byte and leaves the rest alone.
  *
- * Coming from TypeScript: bitwise operators produce a signed 32-bit value and
- * shift counts are not masked.  Use `1u << n` with unsigned values; shifting
- * by the width of the type (or more) is undefined behaviour, and so is a
- * negative shift count.
+ * Note: use `1u << n` with unsigned values; shifting by the width of the type
+ * (or more) is undefined behaviour, and so is a negative shift count.  The
+ * width of the type is the only guaranteed limit; counts are not masked.
  */
 #include "cztest.h"
 

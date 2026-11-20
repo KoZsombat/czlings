@@ -1,8 +1,7 @@
 // cpp06_dtor_raii -- destructors run at scope exit; RAII ties cleanup to it.
 //
-// Coming from TypeScript: there are no destructors and no deterministic
-// destruction. JS has `finally`, but C++ runs destructors of locals on every
-// exit path, including `return` and thrown exceptions.
+// Note: C++ runs destructors of locals on every exit path, including `return`
+// and thrown exceptions. That determinism is what RAII relies on.
 //
 // Task: DepthGuard increments the counter in its constructor. Complete its
 // destructor so the counter is decremented and the log records a closing

@@ -1,3 +1,64 @@
+# Chapter 0: first steps. No programming experience assumed.
+
+[[exercises]]
+name = "b01_hello"
+path = "exercises/00_beginner/b01_hello.c"
+mode = "compile"
+hint = "Every statement in C ends with a semicolon. Add one after the printf call and one after return 0."
+
+[[exercises]]
+name = "b02_variables"
+path = "exercises/00_beginner/b02_variables.c"
+mode = "test"
+hint = "The check expects 42. Change the number stored in value."
+
+[[exercises]]
+name = "b03_arithmetic"
+path = "exercises/00_beginner/b03_arithmetic.c"
+mode = "test"
+hint = "add() returns a - b, but the checks expect a + b."
+
+[[exercises]]
+name = "b04_if"
+path = "exercises/00_beginner/b04_if.c"
+mode = "test"
+hint = "Return -x when x is negative, otherwise return x. Use if (x < 0) and return."
+
+[[exercises]]
+name = "b05_loops"
+path = "exercises/00_beginner/b05_loops.c"
+mode = "test"
+hint = "The loop condition i < n skips n itself. Use i <= n."
+
+[[exercises]]
+name = "b06_functions"
+path = "exercises/00_beginner/b06_functions.c"
+mode = "test"
+hint = "Return x * x instead of x. The parameter x is available inside the function."
+
+[[exercises]]
+name = "b07_arrays"
+path = "exercises/00_beginner/b07_arrays.c"
+mode = "test"
+hint = "Index 0 is the first element. Start the loop at i = 0 so values[0] is included."
+
+[[exercises]]
+name = "b08_strings"
+path = "exercises/00_beginner/b08_strings.c"
+mode = "test"
+hint = "Use while (text[length] != '\\0') and increment length inside the loop."
+
+[[exercises]]
+name = "b09_structs"
+path = "exercises/00_beginner/b09_structs.c"
+mode = "test"
+hint = "Both members are available: return p.x + p.y."
+
+[[exercises]]
+name = "b10_max3"
+path = "exercises/00_beginner/b10_max3.c"
+mode = "test"
+hint = "Find the max of a and b first, then compare that result with c using max2 again."
 [[exercises]]
 name = "c01_hello"
 path = "exercises/01_c_basics/c01_hello.c"
@@ -169,7 +230,7 @@ hint = "Make calls static, increment file_counter, and remove the inner return s
 name = "c29_qsort"
 path = "exercises/02_c_advanced/c29_qsort.c"
 mode = "test"
-hint = "Return a negative, zero or positive comparison instead of a boolean; cmp_str must strcmp the pointed-to strings."
+hint = "Return a negative, zero or positive comparison for a total order; cmp_str must strcmp the pointed-to strings."
 
 [[exercises]]
 name = "c30_ub_traps"

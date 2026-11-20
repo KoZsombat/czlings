@@ -1,10 +1,8 @@
 // cpp05_ctor_init -- member-initializer lists and delegation.
 //
-// Coming from TypeScript: class fields are initialized in declaration order
-// too, but C++ makes the rule explicit and gives you an initializer list.
-// The list is *not* the initialization order: members are constructed in
-// declaration order, and a list written in another order is a common bug
-// (compilers warn with -Wreorder).
+// Note: the initializer list is *not* the initialization order. Members are
+// constructed in declaration order, and a list written in another order is a
+// common bug (compilers warn with -Wreorder).
 
 #include <string>
 #include <utility>

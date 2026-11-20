@@ -4,8 +4,8 @@
  * the terminating '\0' and must report failure when the destination cannot
  * hold the bytes plus the terminator, leaving an empty string behind.
  *
- * Coming from TypeScript: a C string is chars up to '\0'. Forgetting that
- * byte, or copying cap bytes instead of cap - 1, writes past the buffer.
+ * Note: a C string is a run of chars ending at '\0'. Forgetting that byte,
+ * or copying cap bytes instead of cap - 1, writes past the buffer.
  */
 #include "cztest.h"
 #include <stddef.h>

@@ -1,9 +1,8 @@
 // A binary search tree of std::unique_ptr<Node>: insert, contains, in-order
 // walk, height. The destructor is the compiler's: each node frees its subtree.
 //
-// Coming from TypeScript: you would use a class with nullable child fields and
-// trust the GC. Here `std::unique_ptr<Node>` is the nullable link and the
-// ownership tree mirrors the data tree, so no delete is written anywhere.
+// Note: `std::unique_ptr<Node>` is the nullable link and the ownership tree
+// mirrors the data tree, so no delete is written anywhere.
 #include "cztest.h"
 
 #include <algorithm>

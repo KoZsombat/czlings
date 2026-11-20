@@ -1,8 +1,7 @@
 // Function templates: one body, many types.
 //
-// Coming from TypeScript: TS generics are erased before the code runs; C++
-// templates are stamped out once per instantiation, so every operation in the
-// body must be valid for the type you pass in, and each instantiation is a
+// Note: a template is stamped out once per instantiation, so every operation in
+// the body must be valid for the type you pass in, and each instantiation is a
 // separate function in the binary.
 //
 // Task: max_of(a, b) returns the larger of two values of the same type T.

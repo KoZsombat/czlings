@@ -1,10 +1,9 @@
 // cpp18_move -- move constructor and move assignment.
 //
-// Coming from TypeScript: JS has no move semantics; assignment copies a
-// reference. C++ `std::move(x)` is just a cast to an rvalue reference: it lets
-// the compiler pick a move constructor, which steals x's buffer. The
-// moved-from object must stay destructible and assignable; its value is
-// unspecified. Moves should be noexcept. This class follows the rule of five.
+// Note: `std::move(x)` is just a cast to an rvalue reference: it lets the
+// compiler pick a move constructor, which steals x's buffer. The moved-from
+// object must stay destructible and assignable; its value is unspecified.
+// Moves should be noexcept. This class follows the rule of five.
 
 #include <utility>
 

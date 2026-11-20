@@ -1,9 +1,8 @@
 // Class templates: FixedStack<T, N> stores up to N values with no heap use.
 //
-// Coming from TypeScript: `class Stack<T>` has one runtime shape that holds
-// anything; `FixedStack<int, 3>` and `FixedStack<std::string, 3>` are distinct
-// types whose storage is sized at compile time. An empty pop() has no `any` to
-// fall back on, so it must throw.
+// Note: `FixedStack<int, 3>` and `FixedStack<std::string, 3>` are distinct
+// types whose storage is sized at compile time, because type and capacity are
+// template arguments. An empty pop() has no value to return, so it must throw.
 //
 // push() throws std::overflow_error when full; pop() and top() throw
 // std::out_of_range when empty.

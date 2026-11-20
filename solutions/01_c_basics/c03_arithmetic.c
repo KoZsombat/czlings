@@ -4,8 +4,8 @@
  * value. Integer division truncates toward zero; use 2.0 when you want a
  * fractional average; parentheses decide precedence.
  *
- * Coming from TypeScript: in C `/` on two ints is integer division and
- * `%` follows the sign of the dividend, while JS numbers are all doubles.
+ * Note: in C `/` on two ints truncates toward zero, and `%` takes the sign
+ * of the dividend; use a floating-point operand for a fractional result.
  */
 #include "cztest.h"
 

@@ -1,9 +1,7 @@
 // cpp09_operators -- operator overloading.
 //
-// Coming from TypeScript: JavaScript has no operator overloading and `==`
-// coerces types. In C++ you can give your own types operator syntax, but the
-// meaning must stay intuitive: `+` combines, `==` compares all state, `[]`
-// indexes.
+// Note: C++ lets you give your own types operator syntax, but the meaning
+// should stay intuitive: `+` combines, `==` compares all state, `[]` indexes.
 
 #include "cztest.h"
 

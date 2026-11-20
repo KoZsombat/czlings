@@ -4,8 +4,8 @@
  * Use sizeof for sizes, the standard macros for limits, and remember that
  * unsigned arithmetic wraps modulo 2^N.
  *
- * Coming from TypeScript: there is one number type. In C the widths of int
- * and long are NOT guaranteed; sizeof tells you what this compiler chose.
+ * Note: the widths of int and long are not guaranteed; sizeof reports the
+ * width this compiler chose for the target platform.
  */
 #include "cztest.h"
 #include <limits.h>

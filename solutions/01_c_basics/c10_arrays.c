@@ -4,8 +4,8 @@
  * length. In main, ARRAY_LEN works because the array is still an array; once
  * passed to a function it decays to a pointer and the idiom returns garbage.
  *
- * Coming from TypeScript: arrays do not carry their length in C, and there
- * are no bounds checks. The callee must receive the element count.
+ * Note: arrays do not carry their length, and element accesses are not
+ * bounds-checked. A function receiving an array must also receive the count.
  */
 #include "cztest.h"
 #include <stddef.h>

@@ -98,7 +98,7 @@ hint = "Make calls static, increment file_counter, and remove the inner return s
 name = "c29_qsort"
 path = "exercises/02_c_advanced/c29_qsort.c"
 mode = "test"
-hint = "Return a negative, zero or positive comparison instead of a boolean; cmp_str must strcmp the pointed-to strings."
+hint = "Return a negative, zero or positive comparison for a total order; cmp_str must strcmp the pointed-to strings."
 
 [[exercises]]
 name = "c30_ub_traps"

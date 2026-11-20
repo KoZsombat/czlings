@@ -3,8 +3,8 @@
  * Task: grade a score (A >= 90, B >= 80, C >= 70, D >= 60, else F), compute
  * an absolute value, and clamp a value into [lo, hi] with lo <= hi.
  *
- * Coming from TypeScript: conditions are ints, not booleans; any nonzero
- * int is true, and `==` compares values (no `===`).
+ * Note: a C condition is an int, not a dedicated boolean type: zero is false
+ * and any nonzero value is true. `==` compares values.
  */
 #include "cztest.h"
 
