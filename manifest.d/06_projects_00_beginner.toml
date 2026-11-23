@@ -1,0 +1,13 @@
+# Two projects after chapter 0. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p00_temperature"
+path = "projects/00_beginner/p00_temperature.c"
+mode = "test"
+hint = "F = C * 9 / 5 + 32. Classify with <= boundaries. For the array, start max at values[0] and loop from 1."
+
+[[exercises]]
+name = "p00_receipt"
+path = "projects/00_beginner/p00_receipt.c"
+mode = "test"
+hint = "item_total multiplies unit_cents by quantity. Sum it for the receipt. At 5000 cents or more, return total minus total / 10."

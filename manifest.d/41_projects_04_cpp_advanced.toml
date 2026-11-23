@@ -1,0 +1,19 @@
+# Three projects after chapter 4. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p04_word_index"
+path = "projects/04_cpp_advanced/p04_word_index.cpp"
+mode = "test"
+hint = "istringstream splits the line. Keep isalpha bytes and tolower them. Map each word to a set of line numbers. Rank by line count descending, then word."
+
+[[exercises]]
+name = "p04_catalog"
+path = "projects/04_cpp_advanced/p04_catalog.cpp"
+mode = "test"
+hint = "Use std::visit for title and minutes, holds_alternative for books, and get_if to inspect a branch. Sort titles alphabetically."
+
+[[exercises]]
+name = "p04_cpp_pipeline"
+path = "projects/04_cpp_advanced/p04_cpp_pipeline.cpp"
+mode = "test"
+hint = "push assigns a sequence. iterator::skip advances while the predicate is false. EventBus publishes to each subscriber; subscribe ignores duplicates and unsubscribe erases them."

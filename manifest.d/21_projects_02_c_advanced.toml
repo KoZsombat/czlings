@@ -1,0 +1,43 @@
+# Seven projects after chapter 2. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p02_log_analyzer"
+path = "projects/02_c_advanced/p02_log_analyzer.c"
+mode = "test"
+hint = "Grow with realloc when len equals cap. Parse with sscanf. qsort by timestamp, then level, then message. Report with fprintf."
+
+[[exercises]]
+name = "p02_contact_book"
+path = "projects/02_c_advanced/p02_contact_book.c"
+mode = "test"
+hint = "Push allocates and links at the front. Find walks with strcmp. Remove walks a Node **slot, unlinks, then frees."
+
+[[exercises]]
+name = "p02_c_matrix"
+path = "projects/02_c_advanced/p02_c_matrix.c"
+mode = "test"
+hint = "matrix_init callocs rows*cols. Multiply is a triple loop. Transpose swaps rows and cols. Build a temporary and only then replace out."
+
+[[exercises]]
+name = "p02_c_bst"
+path = "projects/02_c_advanced/p02_c_bst.c"
+mode = "test"
+hint = "Insert walks a BstNode **slot; a duplicate returns 1. Height is 1 + max. In-order fills sorted keys; free post-order."
+
+[[exercises]]
+name = "p02_c_state_machine"
+path = "projects/02_c_advanced/p02_c_state_machine.c"
+mode = "test"
+hint = "Trim spaces, validate the key, require '=', then branch on a quote. In quoted values handle backslash escapes; after the closing quote allow only spaces or a comment."
+
+[[exercises]]
+name = "p02_c_backtracking"
+path = "projects/02_c_advanced/p02_c_backtracking.c"
+mode = "test"
+hint = "Queens: one per row, reject the same column or diagonal. Paths: return 1 at the destination and sum the right and down calls."
+
+[[exercises]]
+name = "p02_c_expression"
+path = "projects/02_c_advanced/p02_c_expression.c"
+mode = "test"
+hint = "Recursive descent: expression calls term, term calls factor. Skip spaces in each rule; unary signs recurse into factor; division by zero returns -2."
