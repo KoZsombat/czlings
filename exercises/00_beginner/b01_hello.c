@@ -7,13 +7,15 @@
  * semicolon. Fix both lines, then read the compiler error if you get stuck.
  *
  * New here? Read docs/00-start-here.md first.
+ *
+ * From TS: a TS file is run by Node; a C file is compiled into a native
+ * program, and main() is where the operating system starts it. printf is not
+ * console.log: it takes a format string and does not add a newline for you.
  */
 #include <stdio.h>
 
 int main(void)
 {
-    printf("Hello, world!\n")
-    return 0
+    printf("Hello, world!\n");
+    return 0;
 }
-
-// I AM NOT DONE

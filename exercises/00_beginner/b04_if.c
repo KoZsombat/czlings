@@ -5,12 +5,19 @@
  *
  * Task: absolute(x) must return x when x is zero or positive, and -x when x is
  * negative. The current code ignores the sign.
+ *
+ * From TS: C has no `boolean` type here; the condition is an integer, and 0
+ * means false while any nonzero value means true. `=` assigns, `==` compares.
  */
 #include "cztest.h"
 
 int absolute(int x)
 {
-    return x;
+    if (x >= 0){
+        return x;
+    } else {
+        return -x;
+    };
 }
 
 int main(void)
@@ -20,5 +27,3 @@ int main(void)
     CZ_CHECK_INT(absolute(-7), 7);
     return cztest_summary();
 }
-
-// I AM NOT DONE

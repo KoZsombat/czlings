@@ -6,6 +6,10 @@
 //
 // Task: make operator<< print "value m" (for example "42 m") and let
 // Calibrator::raw() return the private value.
+//
+// From TS: `#private` is enforced at runtime and only on the class itself. C++
+// `friend` is a compile-time grant that lets one named function or class touch
+// private members.
 
 #include <ostream>
 #include <sstream>

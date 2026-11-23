@@ -4,12 +4,15 @@
  * ints truncates toward zero. `5 / 2` is 2, not 2.5.
  *
  * Task: add() should add; multiply() is already correct.
+ *
+ * From TS: JS `/` always produces a float (`5 / 2` is 2.5); C `/` on two ints
+ * is integer division (`5 / 2` is 2). Use a double operand for fractions.
  */
 #include "cztest.h"
 
 int add(int a, int b)
 {
-    return a - b;
+    return a + b;
 }
 
 int multiply(int a, int b)
@@ -24,5 +27,3 @@ int main(void)
     CZ_CHECK_INT(multiply(4, 5), 20);
     return cztest_summary();
 }
-
-// I AM NOT DONE

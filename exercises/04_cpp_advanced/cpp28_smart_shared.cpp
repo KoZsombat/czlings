@@ -9,6 +9,9 @@
 // Task: link() stores child in parent->next (shared) and parent in
 // child->parent (weak). parent_name() goes through lock() so a dead parent
 // reads as "(none)" instead of a dangling pointer.
+//
+// From TS: the GC collects cycles. `shared_ptr` counts references, so a cycle
+// keeps itself alive; `weak_ptr` observes without owning and breaks the cycle.
 #include "cztest.h"
 
 #include <memory>

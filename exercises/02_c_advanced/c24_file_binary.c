@@ -7,6 +7,9 @@
  * Note: the bytes written are the in-memory representation, padding included,
  * so the file is not portable between builds.  fread() returns the number of
  * complete items read, which may be short.
+ *
+ * From TS: JSON serializes fields by name. C writes the struct's raw bytes, so
+ * padding and native byte order end up in the file.
  */
 #include "cztest.h"
 #include <stddef.h>

@@ -6,6 +6,10 @@
 //
 // Task: make_animal builds a Dog for "dog" and a Cat for "cat"; speak_all joins
 // every voice with one space; take_ownership returns the pointer it was given.
+//
+// From TS: every object reference is GC-managed and shared freely.
+// `unique_ptr<T>` encodes single ownership in the type, cannot be copied, and
+// becomes null when moved from.
 #include "cztest.h"
 
 #include <memory>

@@ -6,6 +6,9 @@
 //
 // Task: complete the destructor: delete[] the buffer and update the live
 // counter. Copying is disabled so there is exactly one owner.
+//
+// From TS: `new` allocates an object and the GC frees it. C++ `new[]` needs a
+// matching `delete[]`; `std::vector` is the managed-array equivalent.
 
 #include "cztest.h"
 

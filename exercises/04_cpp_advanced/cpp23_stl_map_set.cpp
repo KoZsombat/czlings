@@ -8,6 +8,10 @@
 // Task: word_counts increments one entry per occurrence (operator[] inserts a
 // zero and returns a reference). unique_words collects distinct words.
 // lookup returns -1 for a missing key without inserting it.
+//
+// From TS: Map and Set preserve insertion order. std::map and std::set stay
+// sorted by key, unordered_map has no order, and operator[] inserts a missing
+// key.
 #include "cztest.h"
 
 #include <map>

@@ -5,6 +5,10 @@
 //
 // Task: store width and height, and implement area(), perimeter() and
 // is_square() for the Rectangle class.
+//
+// From TS: TypeScript `private` is a compile-time rule only. C++ also enforces
+// access at compile time, and `const` on a method is part of the type, so a
+// const object may call only const methods.
 
 #include <string>
 

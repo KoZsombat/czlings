@@ -6,13 +6,16 @@
  *
  * Note: a fixed-size 2D array is one contiguous block of rows, not an array
  * of separate row objects; it cannot be ragged or resized.
+ *
+ * From TS: `number[][]` is an array of row arrays; `int[3][3]` is one
+ * contiguous block with a fixed stride, so rows cannot have different lengths.
  */
 #include "cztest.h"
 
 void mat_add(const int a[3][3], const int b[3][3], int out[3][3])
 {
-    for (int r = 0; r < 2; ++r) {
-        for (int c = 0; c < 3; ++c) {
+    for (int r = 0; r <= 2; ++r) {
+        for (int c = 0; c <= 2; ++c) {
             out[r][c] = a[r][c] + b[r][c];
         }
     }
@@ -22,14 +25,18 @@ void mat_transpose(const int in[3][3], int out[3][3])
 {
     for (int r = 0; r < 3; ++r) {
         for (int c = 0; c < 3; ++c) {
-            out[r][c] = in[r][c];
+            out[r][c] = in[c][r];
         }
     }
 }
 
 int mat_trace(const int m[3][3])
 {
-    return 0;
+    int output = 0;
+    for (int i = 0; i<3; i++){
+        output += m[i][i];
+    }
+    return output;
 }
 
 int main(void)
@@ -52,5 +59,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

@@ -7,6 +7,9 @@
  * Note: each Node is a separate malloc and the `next` pointer is the only link
  * to the rest of the list; overwriting it without freeing the target leaks
  * every node after it.
+ *
+ * From TS: object links are GC roots; a dropped list is collected. Here every
+ * node is a separate allocation, so losing the head pointer leaks the chain.
  */
 #include "cztest.h"
 #include <stdlib.h>

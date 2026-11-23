@@ -6,6 +6,9 @@
  *
  * Note: the widths of int and long are not guaranteed; sizeof reports the
  * width this compiler chose for the target platform.
+ *
+ * From TS: JS has one `number` (a double). C has separate integer types whose
+ * width and overflow rules differ; `sizeof` is the compile-time byte count.
  */
 #include "cztest.h"
 #include <limits.h>
@@ -14,32 +17,32 @@
 
 int char_bytes(void)
 {
-    return 0;
+    return sizeof(char);
 }
 
 int int_bytes(void)
 {
-    return 0;
+    return sizeof(int);
 }
 
 int long_bytes(void)
 {
-    return 0;
+    return sizeof(long);
 }
 
 long long int_max(void)
 {
-    return 0;
+    return __INT_MAX__;
 }
 
 unsigned int wrap_minus_one(void)
 {
-    return 0;
+    return (__INT_MAX__  *2U +1U);
 }
 
 int float_digits(void)
 {
-    return 0;
+    return __FLT_DIG__;
 }
 
 int main(void)
@@ -52,5 +55,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

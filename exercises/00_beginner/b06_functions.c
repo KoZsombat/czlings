@@ -7,12 +7,16 @@
  * Once defined, it can be called anywhere below its definition.
  *
  * Task: square() must return x multiplied by itself.
+ *
+ * From TS: parameter and return types are part of the signature and are
+ * checked when the program is compiled, not when it runs. There are no
+ * optional parameters and no closures.
  */
 #include "cztest.h"
 
 int square(int x)
 {
-    return x;
+    return x * x;
 }
 
 int main(void)
@@ -22,5 +26,3 @@ int main(void)
     CZ_CHECK_INT(square(-4), 16);
     return cztest_summary();
 }
-
-// I AM NOT DONE

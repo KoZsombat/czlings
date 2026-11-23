@@ -5,6 +5,10 @@
 // scoped and do not implicitly convert to int.
 //
 // Task: make sum_squares() actually square its input and complete color_name().
+//
+// From TS: `const enum` is erased and `as const` is a type-level hint.
+// `constexpr` actually computes at compile time, and `static_assert` fails the
+// build.
 
 #include <array>
 #include <string>

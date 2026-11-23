@@ -8,6 +8,11 @@
  * Note: `&x` takes an object's address and `*p` reads or writes the object it
  * points to; nothing is dereferenced for you, and dereferencing NULL is
  * undefined behaviour.
+ *
+ * From TS: you never see addresses; assigning an object shares it and the GC
+ * keeps it alive. A C pointer is an explicit address, and `&x`/`*p` are the
+ * take-address and read/write operations. Pointing at an object does not keep
+ * it alive.
  */
 #include "cztest.h"
 #include <stddef.h>

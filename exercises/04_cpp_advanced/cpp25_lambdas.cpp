@@ -8,6 +8,10 @@
 // Task: make_counter counts 1, 2, 3... across calls; make_adder adds a fixed
 // base; sort_by_abs orders by absolute value; the reference capture must
 // actually update `total`.
+//
+// From TS: an arrow function closes over the binding and the GC keeps captures
+// alive. A C++ lambda captures by value (a snapshot) or by reference (an
+// address); a reference capture can dangle.
 #include "cztest.h"
 
 #include <algorithm>

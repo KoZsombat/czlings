@@ -8,6 +8,10 @@
  * evaluate its arguments once, and missing parentheses change precedence.  A
  * multi-statement macro breaks `if`/`else` unless wrapped in do/while(0).
  * Prefer a static inline function when a function will do.
+ *
+ * From TS: there are no macros; the closest thing is a build step that rewrites
+ * source. A C macro is textual substitution before parsing, with no type
+ * checking and surprising precedence.
  */
 #include "cztest.h"
 

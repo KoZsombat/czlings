@@ -5,6 +5,9 @@
 //
 // Task: make describe() return "name: score/100" and price_tag() return the
 // amount with exactly two decimals followed by " EUR".
+//
+// From TS: there is no template literal or toFixed(); `<<` appends to a stream
+// and manipulators such as std::fixed and std::setprecision configure it.
 
 #include <iomanip>
 #include <iostream>

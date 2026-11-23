@@ -5,6 +5,9 @@
 //
 // Task: complete +, ==, != and += for Vec2, and return the requested element
 // from IntList::operator[] (as a reference, so assignment works).
+//
+// From TS: JavaScript has no operator overloading. C++ adds syntax to your own
+// types, so keep `+`, `==` and `[]` consistent with their built-in meaning.
 
 #include "cztest.h"
 

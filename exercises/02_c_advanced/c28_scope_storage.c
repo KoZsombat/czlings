@@ -8,6 +8,10 @@
  * Note: a block-scope local is recreated on every call; a `static` local is
  * one object with program lifetime, initialised once; an inner declaration
  * shadows the outer one until its block ends.
+ *
+ * From TS: module-level variables live as long as the module, and closures
+ * capture locals. A C `static` local persists between calls but belongs to the
+ * function; there is no closure object to capture other locals.
  */
 #include "cztest.h"
 

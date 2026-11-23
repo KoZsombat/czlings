@@ -6,13 +6,16 @@
  * that starts at 1 silently skips the first element.
  *
  * Task: sum_array() must add every element, indexes 0 through n - 1.
+ *
+ * From TS: `int data[5]` is a fixed block of five integers inside the current
+ * scope, not a heap array object; it has no `.length` and no `push`.
  */
 #include "cztest.h"
 
 int sum_array(const int *values, int n)
 {
     int total = 0;
-    for (int i = 1; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
         total += values[i];
     }
     return total;
@@ -25,5 +28,3 @@ int main(void)
     CZ_CHECK_INT(sum_array(data, 2), 6);
     return cztest_summary();
 }
-
-// I AM NOT DONE

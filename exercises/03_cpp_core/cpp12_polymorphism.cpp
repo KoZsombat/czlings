@@ -6,6 +6,9 @@
 //
 // Task: make area/name virtual in Shape so a Shape* reaches Circle/Square, and
 // make ~Shape virtual so Tracked's destructor runs on delete.
+//
+// From TS: methods dispatch dynamically by default. In C++ you must declare
+// `virtual`, and a polymorphic base needs a virtual destructor for `delete`.
 
 #include <string>
 

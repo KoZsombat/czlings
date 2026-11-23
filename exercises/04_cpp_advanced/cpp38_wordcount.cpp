@@ -8,6 +8,10 @@
 // Task: count_words lowercases and drops non-letters ("The" and "the," become
 // one word); ranked orders by count descending, then word ascending; report
 // joins them as one "word count\n" line per entry.
+//
+// From TS: split, Map and sort build a word count in a few calls. Here the
+// stream, the ordered map and a comparator do the same work with explicit
+// types and stable ordering.
 #include "cztest.h"
 
 #include <algorithm>

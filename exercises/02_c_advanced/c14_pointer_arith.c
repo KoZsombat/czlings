@@ -7,6 +7,9 @@
  * Note: pointer arithmetic is scaled by sizeof(element) and C never checks
  * bounds.  Subtracting two pointers is defined only when both point into the
  * same array; the result is a ptrdiff_t, not a number of bytes.
+ *
+ * From TS: typed-array indexing hides the scaling; `p + 1` in C moves by one
+ * element, not one byte, and there is no bounds check to throw.
  */
 #include "cztest.h"
 #include <stddef.h>

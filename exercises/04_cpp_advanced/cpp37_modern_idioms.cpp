@@ -10,6 +10,10 @@
 // digit with a switch whose scrutinee is declared in the switch (2xx success,
 // 3xx redirect, 4xx client error, 5xx server error); to_bits keeps the low 8
 // bits.
+//
+// From TS: destructuring and `switch` are familiar, but `std::array` carries its
+// length in the type, `std::bitset` has a fixed width, and `[[nodiscard]]` is
+// checked by the compiler.
 #include "cztest.h"
 
 #include <array>

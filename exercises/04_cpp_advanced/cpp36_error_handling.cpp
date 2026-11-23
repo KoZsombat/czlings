@@ -10,6 +10,9 @@
 // find_index throws NotFound when absent; FixedBuffer::push throws
 // std::overflow_error when full and must leave the buffer untouched; is_even is
 // noexcept.
+//
+// From TS: throw/catch is untyped at runtime and `any` can slip through. C++
+// selects handlers by exception type, and `noexcept` is part of the contract.
 #include "cztest.h"
 
 #include <cstddef>

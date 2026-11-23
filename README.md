@@ -129,5 +129,6 @@ way: one exercise per task, with the tests encoding the specification.
   what the exercise teaches.
 * Skeleton files stay small and teach exactly one idea; hints are one concrete
   step, not the answer.
-* Comments explain C/C++ semantics on their own terms — no "in language X this
-  would be…" framing.
+* Comments explain C/C++ semantics on their own terms. Each exercise header
+  ends with one short "From TS:" contrast that names the TS/JS habit the C/C++
+  rule replaces, so a TypeScript developer does not pattern-match the wrong way.

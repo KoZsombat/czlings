@@ -15,6 +15,10 @@
 // every pointer, reference and iterator into the old buffer. insert() and
 // erase() shift the tail by one, so both are O(n) and invalidate iterators at
 // or after the position they touch.
+//
+// From TS: push and splice grow the array for you. This class manages capacity
+// itself: reserve does not change size, insert and erase shift elements, and
+// reallocation invalidates every pointer or iterator into the buffer.
 #include "cztest.h"
 
 #include <cstddef>

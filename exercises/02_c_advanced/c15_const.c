@@ -12,6 +12,10 @@
  * Note: const is checked at compile time only; it does not freeze memory, and
  * another pointer may still change the same object.  Its position around `*`
  * chooses between "the pointee" and "the pointer".
+ *
+ * From TS: `const` forbids reassigning the variable. For a C pointer it
+ * describes what that pointer may modify; the same memory can still be changed
+ * through another pointer.
  */
 #include "cztest.h"
 #include <stddef.h>

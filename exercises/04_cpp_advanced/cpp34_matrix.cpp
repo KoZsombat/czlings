@@ -8,6 +8,10 @@
 //
 // Task: operator* must accumulate over the inner dimension and throw
 // std::invalid_argument when cols() != other.rows().
+//
+// From TS: `number[][]` is a jagged array with no shape metadata. The Matrix
+// class owns rows and columns, and the const overload enforces read-only
+// access.
 #include "cztest.h"
 
 #include <cstddef>

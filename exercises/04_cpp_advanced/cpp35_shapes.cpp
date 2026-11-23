@@ -6,6 +6,10 @@
 //
 // Task: make area() and name() pure virtual in Shape and override them in both
 // subclasses, so every call through a Shape& reaches the real implementation.
+//
+// From TS: an abstract class or interface plus `implements` dispatches through
+// the base type. C++ spells the same idea pure virtual in the base and
+// `override` in the subclass.
 #include "cztest.h"
 
 #include <algorithm>

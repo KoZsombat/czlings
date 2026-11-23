@@ -7,6 +7,10 @@
 //
 // Task: throw ValidationError("age must be positive") for negative ages and
 // ValidationError("age is unrealistic") above 150; valid ages return normally.
+//
+// From TS: `throw new Error` unwinds to `catch`. C++ must run destructors
+// during unwinding too, so catch by `const&` and let RAII clean up on the way
+// out.
 
 #include <stdexcept>
 #include <string>

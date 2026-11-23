@@ -6,6 +6,9 @@
  *
  * Note: all C arguments are passed by value, so a function only ever sees
  * copies; to send data back, return it or pass a pointer.
+ *
+ * From TS: a function argument is a reference to the same object, so callees
+ * see mutations. C copies every argument; a struct parameter is a full copy.
  */
 #include "cztest.h"
 
@@ -21,7 +24,7 @@ struct Pair swap_pair(struct Pair p);
 
 int triple(int v)
 {
-    return v + 1;
+    return v * 3;
 }
 
 void bump(int v)
@@ -39,7 +42,8 @@ void swap(int a, int b)
 
 struct Pair swap_pair(struct Pair p)
 {
-    return p;
+    struct Pair res = {p.b, p.a};
+    return res;
 }
 
 int main(void)
@@ -58,5 +62,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

@@ -5,6 +5,10 @@
 //
 // Task: delete the redundant one-argument int overload (the default already
 // covers it) and make the string overload return "[text]".
+//
+// From TS: default parameters work similarly, but C++ picks overloads by
+// parameter types at compile time; an overload that ties with a default is an
+// error rather than a runtime choice.
 
 #include <string>
 

@@ -6,6 +6,10 @@
 // Task: DepthGuard increments the counter in its constructor. Complete its
 // destructor so the counter is decremented and the log records a closing
 // parenthesis; nested guards must log "(())".
+//
+// From TS: there is no destructor and no deterministic cleanup; you rely on GC
+// and try/finally. RAII turns scope exit, including exception unwinding, into
+// the cleanup hook.
 
 #include <string>
 

@@ -6,6 +6,9 @@
 //
 // Task: keep left < key < right (duplicates ignored), so in_order() is sorted
 // and height() counts nodes on the longest root-to-leaf path (empty tree 0).
+//
+// From TS: the GC frees a dropped tree. Here `unique_ptr` links make ownership
+// recursive: each node frees its two subtrees when it dies.
 #include "cztest.h"
 
 #include <algorithm>

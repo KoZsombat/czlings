@@ -8,6 +8,10 @@
  * Note: strlen() scans for '\0', strncpy() does not promise a terminator, and
  * snprintf() returns the length the full result would need, which may exceed
  * the buffer.
+ *
+ * From TS: string methods return new strings and grow as needed. These helpers
+ * mutate caller buffers with a fixed capacity, so every write must be checked
+ * against that capacity.
  */
 #include "cztest.h"
 #include <stdio.h>

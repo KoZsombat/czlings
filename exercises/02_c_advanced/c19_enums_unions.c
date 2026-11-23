@@ -8,6 +8,10 @@
  * makes its members share bytes, and bitfields pack narrow integers into a
  * word.  Only the shared start address is guaranteed; padding and bit order are
  * implementation-defined, so never print raw bytes.
+ *
+ * From TS: a TS enum is a runtime object and a union type is checked by the
+ * compiler. A C enum is just named ints, and a union is raw overlapping bytes
+ * with no tag to tell you which member is active.
  */
 #include "cztest.h"
 #include <stddef.h>

@@ -7,6 +7,9 @@
 // Task: add a full specialization for bool that formats true/false instead of
 // 1/0. Place it above main: a specialization must be visible before the first
 // use that would instantiate the primary template.
+//
+// From TS: there is no specialization. C++ chooses the exact template
+// definition at compile time, and a specialization must be visible before use.
 #include "cztest.h"
 
 #include <sstream>

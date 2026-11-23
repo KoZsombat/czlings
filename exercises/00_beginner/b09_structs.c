@@ -6,6 +6,9 @@
  * `p.x`. A struct is passed to a function by value, as a copy.
  *
  * Task: sum_coords() must return p.x + p.y.
+ *
+ * From TS: think of a struct as a plain object with a fixed shape, except that
+ * assignment copies the fields instead of sharing one object.
  */
 #include "cztest.h"
 
@@ -16,7 +19,7 @@ struct Point {
 
 int sum_coords(struct Point p)
 {
-    return p.x;
+    return p.x + p.y;
 }
 
 int main(void)
@@ -27,5 +30,3 @@ int main(void)
     CZ_CHECK_INT(sum_coords(b), 3);
     return cztest_summary();
 }
-
-// I AM NOT DONE

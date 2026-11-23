@@ -6,6 +6,10 @@
 //
 // Task: fix both twice() functions inside their namespaces; app::math::twice
 // doubles, app::text::twice duplicates the text.
+//
+// From TS: modules keep names private until exported and imported. C++
+// namespaces merely group names, and `using namespace` makes every name
+// visible at once.
 
 #include <string>
 

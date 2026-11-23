@@ -7,6 +7,10 @@
  * Note: a heap copy needs strlen(src) + 1 bytes because the terminator is part
  * of the allocation, and the caller must free it.  Returning a pointer into
  * src would not be a copy.
+ *
+ * From TS: returning a string returns an immutable value that is collected.
+ * Here you return a raw pointer the caller must free, and the NUL byte is part
+ * of the allocation.
  */
 #include "cztest.h"
 #include <stdlib.h>

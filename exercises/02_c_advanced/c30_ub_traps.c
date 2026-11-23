@@ -10,6 +10,10 @@
  * returned pointer dangles once the function returns.  Signed integer
  * overflow is also undefined behaviour, not wraparound: the result cannot be
  * relied on.  <limits.h> provides INT_MAX and INT_MIN for bounds checks.
+ *
+ * From TS: JS catches many mistakes at runtime (TypeError, RangeError) and
+ * otherwise has defined behaviour. In C these mistakes are undefined: anything
+ * may happen, so run with CZ_SAN=1 to turn them into reports.
  */
 #include "cztest.h"
 #include <limits.h>

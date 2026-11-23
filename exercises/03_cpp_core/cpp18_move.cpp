@@ -8,6 +8,9 @@
 //
 // Task: add the move constructor and move assignment: steal the buffer, set the
 // source to size 0 / nullptr, and increment moves instead of copies.
+//
+// From TS: assignment shares the object and there is no move. A C++ move steals
+// the source's buffer and leaves a valid but unspecified object behind.
 
 #include <utility>
 

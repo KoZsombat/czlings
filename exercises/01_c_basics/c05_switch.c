@@ -6,6 +6,9 @@
  *
  * Note: cases in a C switch share one scope and do not stop on their own;
  * fallthrough is the default, so each case needs an explicit break.
+ *
+ * From TS: `switch` behaves like JS (fallthrough unless you break), but cases
+ * accept only integer or char constants, not strings, and share one scope.
  */
 #include "cztest.h"
 
@@ -17,10 +20,13 @@ int apply(int a, char op, int b, int *err)
     switch (op) {
     case '+':
         result = a + b;
+        break;
     case '-':
         result = a - b;
+        break;
     case '*':
         result = a * b;
+        break;
     case '/':
         if (b == 0) {
             *err = 1;
@@ -30,6 +36,7 @@ int apply(int a, char op, int b, int *err)
         break;
     default:
         *err = 1;
+        break;
     }
     return result;
 }
@@ -47,5 +54,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

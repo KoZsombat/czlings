@@ -6,6 +6,10 @@
 //
 // Task: both copies allocate their own buffer, copy every element, resize the
 // target, and survive `x = x`.
+//
+// From TS: assigning an object copies the reference and the GC owns the data.
+// C++ copies the object itself; the default copy would alias the same buffer,
+// so an owning class must copy deeply.
 
 #include "cztest.h"
 

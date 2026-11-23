@@ -7,6 +7,10 @@
  * Note: use `1u << n` with unsigned values; shifting by the width of the type
  * (or more) is undefined behaviour, and so is a negative shift count.  The
  * width of the type is the only guaranteed limit; counts are not masked.
+ *
+ * From TS: `& | ^ << >>` exist, but JS coerces operands to 32-bit signed ints
+ * and returns a number. C unsigned bit operations keep the exact width and
+ * wrap predictably.
  */
 #include "cztest.h"
 

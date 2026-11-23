@@ -7,15 +7,17 @@
  * Note: a C string is a fixed char buffer whose capacity the caller supplies.
  * snprintf never writes past that capacity, and its return value is the
  * length the full, untruncated output would have had.
+ *
+ * From TS: a template string allocates the result for you; snprintf formats
+ * into a buffer the caller allocated, so the capacity is a separate argument
+ * and the return value is not the number of bytes actually written.
  */
 #include "cztest.h"
 #include <stddef.h>
 
 int format_greeting(char *out, size_t cap, const char *name, int age)
 {
-    (void)cap;
-    (void)snprintf(out, cap, "%s (%d)", name, age);
-    return (int)strlen(out);
+    return snprintf(out, cap, "%s (%d)", name, age);
 }
 
 int main(void)
@@ -34,5 +36,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

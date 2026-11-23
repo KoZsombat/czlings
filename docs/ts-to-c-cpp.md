@@ -4,7 +4,8 @@ This is a standalone bridge, not a comparison table. Read it once end to end,
 type the examples, and you will be able to read and write C17/C++17 at the level
 the exercises require. The exercises themselves make no assumptions about your
 background; this document exists to make the switch fast if you already program
-in TypeScript/JavaScript.
+in TypeScript/JavaScript. Every exercise header also ends with a short
+**From TS:** note that names the TS/JS habit the exercise replaces.
 
 What changes in one sentence: you lose the garbage collector, the dynamic type
 system and the runtime, and you gain direct control over memory, layout and

@@ -7,6 +7,9 @@
  * Note: argv is a pointer to pointers terminated only by argc (plus a NULL
  * sentinel by convention).  Compare strings with strcmp; `==` compares
  * addresses, not contents.
+ *
+ * From TS: `process.argv` is an array of strings. C gives you `argc` plus a
+ * `char **` with no length on each string, and `argv[0]` is the program name.
  */
 #include "cztest.h"
 #include <stddef.h>

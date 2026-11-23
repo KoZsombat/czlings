@@ -6,6 +6,9 @@
 //
 // Task: make construction log "ab" (deliberately, a before b), and make the
 // one-argument Email constructor delegate to the two-argument one.
+//
+// From TS: a constructor body runs top to bottom. C++ member initialization
+// runs in declaration order before the body, no matter how the list is written.
 
 #include <string>
 #include <utility>

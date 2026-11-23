@@ -8,6 +8,10 @@
 // Task: count_value counts every match in [first, last); reversed copies the
 // values in reverse with reverse iterators; sorted_unique deduplicates through
 // std::set and writes through std::back_inserter.
+//
+// From TS: the iterator protocol yields values one at a time. C++ splits that
+// into begin/end iterator pairs, and algorithms work on any container that
+// supports the operations they use.
 #include "cztest.h"
 
 #include <algorithm>

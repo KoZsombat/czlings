@@ -6,12 +6,15 @@
  *
  * Note: in C `/` on two ints truncates toward zero, and `%` takes the sign
  * of the dividend; use a floating-point operand for a fractional result.
+ *
+ * From TS: `%` on JS numbers is a float remainder; on C ints it is integer
+ * remainder, and `(a + b) / 2` stays integer until one operand is `2.0`.
  */
 #include "cztest.h"
 
 int div_trunc(int a, int b)
 {
-    return a * b;
+    return a / b;
 }
 
 int mod_trunc(int a, int b)
@@ -21,23 +24,23 @@ int mod_trunc(int a, int b)
 
 double mean(int a, int b)
 {
-    return (a + b) / 2;
+    return (a + b) / 2.0;
 }
 
 int weighted(int a, int b)
 {
-    return a + b * 2;
+    return (a + b) * 2;
 }
 
 int compound(int x)
 {
-    x = x * 2 + 3;
+    x = x * (2 + 3);
     return x;
 }
 
 int cast_trunc(double v)
 {
-    return (int)(v + 0.5);
+    return (int)(v - 0.5);
 }
 
 int main(void)
@@ -50,5 +53,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

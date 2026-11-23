@@ -5,12 +5,15 @@
  *
  * Note: a C condition is an int, not a dedicated boolean type: zero is false
  * and any nonzero value is true. `==` compares values.
+ *
+ * From TS: `if (score > 90)` works the same, but there is no `===` and no
+ * truthiness of strings or objects: the condition is an integer or a pointer.
  */
 #include "cztest.h"
 
 char grade_for(int score)
 {
-    if (score > 90) {
+    if (score >= 90) {
         return 'A';
     } else if (score >= 80) {
         return 'B';
@@ -24,15 +27,15 @@ char grade_for(int score)
 
 int abs_int(int v)
 {
-    return v;
+    return v < 0 ? v*-1 : v;
 }
 
 int clamp(int v, int lo, int hi)
 {
-    if (v < lo) {
+    if (abs_int(hi-v) > abs_int(lo-v)) {
         return lo;
     }
-    return v;
+    return hi;
 }
 
 int main(void)
@@ -45,5 +48,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

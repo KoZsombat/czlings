@@ -6,6 +6,10 @@
 //
 // Task: alive_ counts live Widget objects. Update it in the constructor and
 // destructor so alive() reports the truth.
+//
+// From TS: `static` class members are initialized where declared. In C++ a
+// non-const static member also needs one out-of-class definition, and static
+// methods have no `this`.
 
 #include "cztest.h"
 

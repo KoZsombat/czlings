@@ -6,6 +6,9 @@
  *
  * Note: arrays do not carry their length, and element accesses are not
  * bounds-checked. A function receiving an array must also receive the count.
+ *
+ * From TS: an array knows its length and is passed as one object. A C array
+ * decays to a pointer to its first element, so the length is lost at the call.
  */
 #include "cztest.h"
 #include <stddef.h>
@@ -15,7 +18,7 @@
 int array_sum(const int *arr, size_t n)
 {
     int total = 0;
-    for (size_t i = 0; i + 1 < n; ++i) {
+    for (size_t i = 0; i < n; ++i) {
         total += arr[i];
     }
     return total;
@@ -23,8 +26,8 @@ int array_sum(const int *arr, size_t n)
 
 int array_max(const int *arr, size_t n)
 {
-    int best = 0;
-    for (size_t i = 1; i < n; ++i) {
+    int best = arr[0];
+    for (size_t i = 0; i < n; ++i) {
         if (arr[i] > best) {
             best = arr[i];
         }
@@ -34,7 +37,7 @@ int array_max(const int *arr, size_t n)
 
 void reverse_array(int *arr, size_t n)
 {
-    for (size_t i = 0; i < n; ++i) {
+    for (size_t i = 0; i < n / 2; ++i) {
         int tmp = arr[i];
         arr[i] = arr[n - 1 - i];
         arr[n - 1 - i] = tmp;
@@ -63,5 +66,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

@@ -7,6 +7,9 @@
  * Note: `p->score` is shorthand for `(*p).score`.  Nothing checks the pointer
  * for NULL, and a `const Player *` parameter promises the caller that the
  * struct will not be modified.
+ *
+ * From TS: passing an object to a function lets the function mutate it. In C
+ * that only happens through a pointer; a by-value struct argument is a copy.
  */
 #include "cztest.h"
 #include <stddef.h>

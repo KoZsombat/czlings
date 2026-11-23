@@ -8,6 +8,10 @@
 // Task: parse_int accepts an optional '-' plus at least one digit and returns
 // std::nullopt for anything else (no exception, no sentinel). pick returns an
 // int or a std::string. describe names the stored alternative and its value.
+//
+// From TS: `T | undefined` and discriminated unions exist only at the type
+// level. optional and variant store a runtime tag alongside the value and are
+// copied as values.
 #include "cztest.h"
 
 #include <cstddef>

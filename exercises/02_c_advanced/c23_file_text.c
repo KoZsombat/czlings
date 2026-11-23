@@ -7,6 +7,10 @@
  * Note: stdio calls return counts or error codes.  fgets() keeps the trailing
  * newline, EOF is an int value distinct from any char, and a read can fail
  * partway through.
+ *
+ * From TS: `fs.readFileSync` hands you the whole string. C stdio is a cursor
+ * over bytes: you read chunks or lines, track the position, and rewind
+ * explicitly.
  */
 #include "cztest.h"
 #include <ctype.h>

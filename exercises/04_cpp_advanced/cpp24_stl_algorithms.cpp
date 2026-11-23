@@ -7,6 +7,9 @@
 // Task: sort_descending orders largest first; first_negative returns the index
 // of the first negative value; count_above counts values > limit; total sums
 // the range; doubled returns a new vector with each value times two.
+//
+// From TS: map/filter/reduce are array methods that allocate. C++ algorithms
+// take iterator pairs and a predicate or comparator, and many mutate in place.
 #include "cztest.h"
 
 #include <algorithm>

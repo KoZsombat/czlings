@@ -6,6 +6,10 @@
 //
 // Task: parse one record ("word count price"), convert with a fallback on
 // malformed input, and return the first space-delimited token as a view.
+//
+// From TS: parseInt returns NaN and split allocates. Here stoi throws and may
+// consume only a prefix, while string_view is a non-owning slice with no
+// lifetime safety.
 
 #include <cstddef>
 #include <sstream>

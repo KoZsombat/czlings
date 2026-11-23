@@ -6,14 +6,18 @@
  *
  * Note: break exits only the innermost loop, and continue jumps to the next
  * iteration of the innermost loop.
+ *
+ * From TS: break and continue are the same, but C has no labeled statements;
+ * to leave two nested loops at once you need a flag or a goto.
  */
 #include "cztest.h"
 
 int is_prime(int n)
 {
+    if (n < 2) return 0;
     for (int d = 2; d < n; ++d) {
         if (n % d == 0) {
-            return 1;
+            return 0;
         }
     }
     return 1;
@@ -23,6 +27,7 @@ int sum_multiples(int limit)
 {
     int total = 0;
     for (int i = 1; i < limit; ++i) {
+        if (i % 3 == 0 || i % 5 == 0)
         total += i;
     }
     return total;
@@ -32,7 +37,7 @@ int triangle_sum(int rows)
 {
     int total = 0;
     for (int r = 1; r <= rows; ++r) {
-        for (int c = 1; c < r; ++c) {
+        for (int c = 1; c <= r; ++c) {
             total += c;
         }
     }
@@ -49,5 +54,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

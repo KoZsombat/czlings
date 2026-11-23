@@ -6,13 +6,16 @@
  * Note: for a nonnegative int, `n % 10` extracts the last decimal digit and
  * `n / 10` drops it; both are integer operations, with no string conversion
  * involved.
+ *
+ * From TS: JS has no `do..while` and gives you `String(n).length`; here digit
+ * extraction is arithmetic on the integer itself.
  */
 #include "cztest.h"
 
 int sum_to(int n)
 {
     int total = 0;
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i <= n; ++i) {
         total += i;
     }
     return total;
@@ -21,16 +24,22 @@ int sum_to(int n)
 int digit_count(int n)
 {
     int count = 0;
-    while (n > 0) {
+    do {
         ++count;
         n /= 10;
-    }
+    } while (n > 0);
     return count;
 }
 
 int reverse_int(int n)
 {
-    return n;
+    int output = 0;
+    while (n != 0){
+        int digit = n % 10;
+        output = output * 10 + digit;
+        n /= 10;
+    };
+    return output;
 }
 
 int main(void)
@@ -43,5 +52,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

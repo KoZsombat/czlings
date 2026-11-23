@@ -5,6 +5,9 @@
 // Note: type and capacity are compile-time arguments, so FixedStack<int, 3> and
 // FixedStack<std::string, 3> are distinct types with differently sized storage.
 // An empty pop() has no value to return, so it throws.
+//
+// From TS: one generic class serves every type at runtime. Here
+// `FixedStack<T, N>` is a separate type and layout for each T and N.
 #include "cztest.h"
 
 #include <array>

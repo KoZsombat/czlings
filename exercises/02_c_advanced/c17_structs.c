@@ -7,6 +7,9 @@
  * Note: a struct has value semantics: `p = q` copies every field, and passing
  * a struct to a function copies it too.  Use a pointer when the callee must
  * update the caller's object.
+ *
+ * From TS: an object assigned to another variable is shared; a struct assigned
+ * to another struct is copied field by field. Getting a copy costs `sizeof`.
  */
 #include "cztest.h"
 

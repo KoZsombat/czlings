@@ -7,6 +7,9 @@
 //
 // Task: fix operator+= (both components) and make operator<< print
 // "re+imi", using '-' when the imaginary part is negative.
+//
+// From TS: `+` on objects is string concatenation or coercion, and there is no
+// custom operator. C++ value types define their own `+`, `==` and `<<`.
 #include "cztest.h"
 
 #include <ostream>

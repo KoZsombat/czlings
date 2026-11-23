@@ -7,6 +7,10 @@
  * Note: C never frees memory for you: every successful allocation must
  * eventually be freed, realloc can move the block, and accessing data[len] is
  * not bounds-checked.
+ *
+ * From TS: arrays grow themselves and the GC reclaims them. Here you allocate,
+ * grow and free explicitly, and every read and write is an unchecked memory
+ * access.
  */
 #include "cztest.h"
 #include <stdlib.h>

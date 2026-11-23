@@ -7,6 +7,9 @@
  * Note: you pass a plain function pointer, and it receives `const void *`
  * arguments.  The comparator must describe a consistent total order;
  * returning a - b can overflow, so compare with > and < instead.
+ *
+ * From TS: `arr.sort((a, b) => a - b)` passes a closure. C passes a plain
+ * function pointer and untyped `void *` arguments that you cast back.
  */
 #include "cztest.h"
 #include <stdlib.h>

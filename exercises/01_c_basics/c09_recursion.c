@@ -6,25 +6,37 @@
  *
  * Note: C has a small, fixed call stack; runaway recursion crashes the
  * process rather than raising an exception.
+ *
+ * From TS: recursion looks identical, but a stack overflow is not a catchable
+ * RangeError; it terminates the process.
  */
 #include "cztest.h"
 
 long long factorial(int n)
 {
     if (n == 0) {
-        return 0;
+        return 1;
     }
     return n * factorial(n - 1);
 }
 
 int gcd(int a, int b)
 {
-    return a % b;
+    while (b != 0){
+        int temp = b; 
+        b = a % b;
+        a = temp;
+    };
+    return a;
 }
 
 long long ipow(int base, int exp)
 {
-    return base * exp;
+    int result = base;
+    for (int i = 1; i < exp; ++i){
+        result *= base;
+    };
+    return result;
 }
 
 int main(void)
@@ -37,5 +49,3 @@ int main(void)
 
     return cztest_summary();
 }
-
-// I AM NOT DONE

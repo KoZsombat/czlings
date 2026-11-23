@@ -7,6 +7,10 @@
 // Task: fix swap_values() (it currently does nothing), and make shout()
 // return the text uppercased with a single '!' appended, leaving its argument
 // untouched.
+//
+// From TS: objects and arrays are passed by reference implicitly. C++ makes the
+// choice explicit: `T&` is a non-null alias, `T` is a copy, and `const T&` is a
+// read-only alias.
 
 #include <cctype>
 #include <string>

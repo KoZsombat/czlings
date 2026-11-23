@@ -7,6 +7,10 @@
 // Task: chain the constructor so a Dog keeps its name, hide speak() with
 // "Woof", provide base_speak() calling Animal::speak(), and let tag() use the
 // protected member.
+//
+// From TS: `extends` plus `super()` initializes the base. C++ calls the base
+// constructor in the initializer list, and same-named members hide rather than
+// override unless the base method is virtual.
 
 #include <string>
 

@@ -7,6 +7,10 @@
 //
 // Task: keep_even returns a copy with only even values; erase_odds removes odd
 // values in place without ever using an invalidated iterator or index.
+//
+// From TS: `splice` shifts the array for you. A vector iterator is a pointer
+// into its buffer, so reallocation or erase invalidates it; use the iterator
+// that erase returns.
 #include "cztest.h"
 
 #include <cstddef>

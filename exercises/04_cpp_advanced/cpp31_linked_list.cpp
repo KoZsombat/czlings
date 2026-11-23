@@ -6,6 +6,9 @@
 //
 // Task: push_front inserts at the front in O(1); to_vector reads top to bottom;
 // reverse() relinks the nodes so the order flips and no node leaks.
+//
+// From TS: a linked chain is kept alive by references and collected. Here each
+// `unique_ptr` owns the next node, so dropping the head frees the whole list.
 #include "cztest.h"
 
 #include <memory>

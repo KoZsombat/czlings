@@ -7,6 +7,10 @@
 // Task: max_of(a, b) returns the larger of two values of the same type T.
 // clamp_value(value, lo, hi) returns value limited to [lo, hi]; the result
 // keeps the type of `value`, even when the bounds have another type U.
+//
+// From TS: generics are erased and checked loosely. A C++ template is
+// instantiated per type at compile time, so every operation in the body must
+// compile for the type you pass.
 #include "cztest.h"
 
 #include <string>
