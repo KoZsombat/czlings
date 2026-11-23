@@ -1,0 +1,13 @@
+# Two projects after chapter 1. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p01_gradebook"
+path = "projects/01_c_basics/p01_gradebook.c"
+mode = "test"
+hint = "Average is a double sum divided by count. Letter grades are threshold checks. Empty best_score returns -1."
+
+[[exercises]]
+name = "p01_tictactoe"
+path = "projects/01_c_basics/p01_tictactoe.c"
+mode = "test"
+hint = "Check rows, columns and both diagonals, then scan for a space. A full board with no line is 'D'."

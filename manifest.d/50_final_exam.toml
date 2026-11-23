@@ -1,0 +1,19 @@
+# Final ZH after all chapters: two C tasks and one C++ task.
+
+[[exercises]]
+name = "zh1_rle"
+path = "projects/final_exam/zh1_rle.c"
+mode = "test"
+hint = "Walk one run at a time. Write the character, then the run length digits reversed from a small buffer. Check cap before each write."
+
+[[exercises]]
+name = "zh2_list"
+path = "projects/final_exam/zh2_list.c"
+mode = "test"
+hint = "insert_sorted walks a Node **slot. remove_duplicates unlinks and frees the duplicate. reverse moves each node to the front."
+
+[[exercises]]
+name = "zh3_polynomial"
+path = "projects/final_exam/zh3_polynomial.cpp"
+mode = "test"
+hint = "Resize for +=. Convolve coefficients for *. Evaluate with Horner. Print signs and omit coefficient 1 except for the constant term."

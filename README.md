@@ -4,7 +4,7 @@ Learn **C17 and C++17** by fixing small broken programs. Rustlings-style: a
 watcher runs the next exercise, you edit the file until its checks pass, delete
 `// I AM NOT DONE`, and it moves on. Hints and reference solutions are included.
 
-**78 exercises, starting from zero.** No prior programming experience is
+**98 exercises, starting from zero.** No prior programming experience is
 assumed; chapter 0 starts at "print a line of text". The later chapters reach
 BME VIK computer-engineering exam level (pointers, manual memory, classes, RAII,
 templates, STL, data structures).
@@ -86,6 +86,8 @@ the tutorial ships with one.
 | 2. C core | `exercises/02_c_advanced` | 18 | pointers, `const`, structs, unions, enums, `malloc`, linked lists, files, preprocessor, bit operations, `qsort`, undefined behaviour |
 | 3. C++ core | `exercises/03_cpp_core` | 18 | references, classes, constructors/destructors, RAII, rule of three/five, operator overloading, inheritance, polymorphism, exceptions, move semantics |
 | 4. C++ advanced | `exercises/04_cpp_advanced` | 20 | templates, STL containers/algorithms, lambdas, iterators, smart pointers, `optional`/`variant`, data-structure and OOP capstones |
+| Capstones | `projects/` | 17 | from-scratch projects after each chapter: beginner helpers, gradebook/tic-tac-toe, log analyzer/contact book/matrix/BST/state machine/backtracking/expression parser, bank/matrix/library, word index/catalog/pipeline |
+| Final ZH | `projects/final_exam` | 3 | timed BME-style exam: run-length encoding, linked list, polynomial + a theory sheet |
 
 Mapping to BME VIK:
 
@@ -98,6 +100,31 @@ Mapping to BME VIK:
   (`cpp32`), dynamic array (`cpp30`), matrix (`cpp34`), sorting/searching
   (`c29`, `cpp24`).
 
+## Capstone projects and final exam
+
+[`projects/`](projects/README.md) adds **17 from-scratch projects** after the
+chapters and a BME-style final ZH. A project is a normal `czlings` exercise: the
+file gives you the public API and the tests, and the implementation bodies are
+`TODO` stubs you write yourself. The projects fill the Prog1/Prog2 gaps that
+small exercises cannot cover: dynamic matrices, BST, state machines,
+backtracking, recursive-descent parsing, multiple inheritance, RTTI,
+persistence, custom iterators and design patterns.
+
+```sh
+czlings run p02_c_bst
+czlings run p02_c_expression
+czlings run p03_cpp_library
+czlings run p04_cpp_pipeline
+```
+
+See [PROG1_PROG2_COVERAGE.md](projects/PROG1_PROG2_COVERAGE.md) for the
+lecture-by-lecture map.
+
+The ZH lives in [`projects/final_exam/`](projects/final_exam/README.md): 120
+minutes, 50 points, two C tasks, one C++ task and a theory sheet. The reference
+implementations are mirrored under `solutions/projects/`, so `czlings verify`
+checks them with everything else.
+
 ## Documentation
 
 * [docs/00-start-here.md](docs/00-start-here.md) — zero-experience setup,
@@ -105,6 +132,12 @@ Mapping to BME VIK:
 * [docs/ts-to-c-cpp.md](docs/ts-to-c-cpp.md) — optional: TypeScript/JavaScript
   mental model mapped onto C/C++ (value vs reference semantics, no GC, UB,
   templates vs erased generics).
+* [projects/README.md](projects/README.md) — the 17 capstone projects and how to
+  work them from zero.
+* [projects/PROG1_PROG2_COVERAGE.md](projects/PROG1_PROG2_COVERAGE.md) — Prog1
+  and Prog2 lecture topics mapped to exercises and projects.
+* [projects/final_exam/README.md](projects/final_exam/README.md) — ZH rules,
+  points, grading and suggested order.
 
 ## Adding exercises / exams
 
@@ -120,7 +153,11 @@ hint = "Dereference before you compare; the array decays to a pointer."
 ```
 
 Then `make manifest && czlings verify`. Exam sheets become exercises the same
-way: one exercise per task, with the tests encoding the specification.
+way: one exercise per task, with the tests encoding the specification. A
+capstone lives under `projects/<chapter>/<name>.c[pp]` with its reference under
+`solutions/projects/<chapter>/<name>.c[pp]`; the runner maps the two paths the
+same way as chapter exercises. Keep the project file a single translation unit
+so the one-file build still applies.
 
 ## Rules for content
 

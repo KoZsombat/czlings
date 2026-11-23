@@ -1,0 +1,19 @@
+# Three projects after chapter 3. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p03_bank"
+path = "projects/03_cpp_core/p03_bank.cpp"
+mode = "test"
+hint = "Validate cents and throw. Withdraw checks the balance. Transfer withdraws then deposits. month_end applies fees. Report sorts by balance descending then id."
+
+[[exercises]]
+name = "p03_matrix"
+path = "projects/03_cpp_core/p03_matrix.cpp"
+mode = "test"
+hint = "Copy allocates and copies. Move steals and leaves the source empty. Product is a triple loop. Print rows with spaces and a newline."
+
+[[exercises]]
+name = "p03_cpp_library"
+path = "projects/03_cpp_core/p03_cpp_library.cpp"
+mode = "test"
+hint = "Book, Dvd and AudioBook implement kind and describe. AudioBook also implements Borrowable. find_audiobook uses dynamic_cast. save and load use pipe records; report adds available or borrowed."

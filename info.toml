@@ -59,6 +59,19 @@ name = "b10_max3"
 path = "exercises/00_beginner/b10_max3.c"
 mode = "test"
 hint = "Find the max of a and b first, then compare that result with c using max2 again."
+# Two projects after chapter 0. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p00_temperature"
+path = "projects/00_beginner/p00_temperature.c"
+mode = "test"
+hint = "F = C * 9 / 5 + 32. Classify with <= boundaries. For the array, start max at values[0] and loop from 1."
+
+[[exercises]]
+name = "p00_receipt"
+path = "projects/00_beginner/p00_receipt.c"
+mode = "test"
+hint = "item_total multiplies unit_cents by quantity. Sum it for the receipt. At 5000 cents or more, return total minus total / 10."
 [[exercises]]
 name = "c01_hello"
 path = "exercises/01_c_basics/c01_hello.c"
@@ -130,6 +143,19 @@ name = "c12_strings"
 path = "exercises/01_c_basics/c12_strings.c"
 mode = "test"
 hint = "Compares must scan until characters differ or a NUL is reached; the copy needs len + 1 <= cap, writes dst[len] = 0, and empties dst on failure."
+# Two projects after chapter 1. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p01_gradebook"
+path = "projects/01_c_basics/p01_gradebook.c"
+mode = "test"
+hint = "Average is a double sum divided by count. Letter grades are threshold checks. Empty best_score returns -1."
+
+[[exercises]]
+name = "p01_tictactoe"
+path = "projects/01_c_basics/p01_tictactoe.c"
+mode = "test"
+hint = "Check rows, columns and both diagonals, then scan for a space. A full board with no line is 'D'."
 [[exercises]]
 name = "c13_pointers"
 path = "exercises/02_c_advanced/c13_pointers.c"
@@ -237,6 +263,49 @@ name = "c30_ub_traps"
 path = "exercises/02_c_advanced/c30_ub_traps.c"
 mode = "test"
 hint = "Initialise all three values, stop the loop at i < 3, use static storage for slot, and check limits before adding."
+# Seven projects after chapter 2. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p02_log_analyzer"
+path = "projects/02_c_advanced/p02_log_analyzer.c"
+mode = "test"
+hint = "Grow with realloc when len equals cap. Parse with sscanf. qsort by timestamp, then level, then message. Report with fprintf."
+
+[[exercises]]
+name = "p02_contact_book"
+path = "projects/02_c_advanced/p02_contact_book.c"
+mode = "test"
+hint = "Push allocates and links at the front. Find walks with strcmp. Remove walks a Node **slot, unlinks, then frees."
+
+[[exercises]]
+name = "p02_c_matrix"
+path = "projects/02_c_advanced/p02_c_matrix.c"
+mode = "test"
+hint = "matrix_init callocs rows*cols. Multiply is a triple loop. Transpose swaps rows and cols. Build a temporary and only then replace out."
+
+[[exercises]]
+name = "p02_c_bst"
+path = "projects/02_c_advanced/p02_c_bst.c"
+mode = "test"
+hint = "Insert walks a BstNode **slot; a duplicate returns 1. Height is 1 + max. In-order fills sorted keys; free post-order."
+
+[[exercises]]
+name = "p02_c_state_machine"
+path = "projects/02_c_advanced/p02_c_state_machine.c"
+mode = "test"
+hint = "Trim spaces, validate the key, require '=', then branch on a quote. In quoted values handle backslash escapes; after the closing quote allow only spaces or a comment."
+
+[[exercises]]
+name = "p02_c_backtracking"
+path = "projects/02_c_advanced/p02_c_backtracking.c"
+mode = "test"
+hint = "Queens: one per row, reject the same column or diagonal. Paths: return 1 at the destination and sum the right and down calls."
+
+[[exercises]]
+name = "p02_c_expression"
+path = "projects/02_c_advanced/p02_c_expression.c"
+mode = "test"
+hint = "Recursive descent: expression calls term, term calls factor. Skip spaces in each rule; unary signs recurse into factor; division by zero returns -2."
 [[exercises]]
 name = "cpp01_io"
 path = "exercises/03_cpp_core/cpp01_io.cpp"
@@ -344,6 +413,25 @@ name = "cpp18_move"
 path = "exercises/03_cpp_core/cpp18_move.cpp"
 mode = "test"
 hint = "Move constructor and assignment steal data_, set the source to size 0 and nullptr, increment moves, and are marked noexcept."
+# Three projects after chapter 3. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p03_bank"
+path = "projects/03_cpp_core/p03_bank.cpp"
+mode = "test"
+hint = "Validate cents and throw. Withdraw checks the balance. Transfer withdraws then deposits. month_end applies fees. Report sorts by balance descending then id."
+
+[[exercises]]
+name = "p03_matrix"
+path = "projects/03_cpp_core/p03_matrix.cpp"
+mode = "test"
+hint = "Copy allocates and copies. Move steals and leaves the source empty. Product is a triple loop. Print rows with spaces and a newline."
+
+[[exercises]]
+name = "p03_cpp_library"
+path = "projects/03_cpp_core/p03_cpp_library.cpp"
+mode = "test"
+hint = "Book, Dvd and AudioBook implement kind and describe. AudioBook also implements Borrowable. find_audiobook uses dynamic_cast. save and load use pipe records; report adds available or borrowed."
 [[exercises]]
 name = "cpp19_templates_fn"
 path = "exercises/04_cpp_advanced/cpp19_templates_fn.cpp"
@@ -463,3 +551,41 @@ name = "cpp38_wordcount"
 path = "exercises/04_cpp_advanced/cpp38_wordcount.cpp"
 mode = "test"
 hint = "Keep only isalpha bytes, lowercase them, and sort by count descending with the word ascending as the tie-break."
+# Three projects after chapter 4. Each starts from zero: implement every TODO.
+
+[[exercises]]
+name = "p04_word_index"
+path = "projects/04_cpp_advanced/p04_word_index.cpp"
+mode = "test"
+hint = "istringstream splits the line. Keep isalpha bytes and tolower them. Map each word to a set of line numbers. Rank by line count descending, then word."
+
+[[exercises]]
+name = "p04_catalog"
+path = "projects/04_cpp_advanced/p04_catalog.cpp"
+mode = "test"
+hint = "Use std::visit for title and minutes, holds_alternative for books, and get_if to inspect a branch. Sort titles alphabetically."
+
+[[exercises]]
+name = "p04_cpp_pipeline"
+path = "projects/04_cpp_advanced/p04_cpp_pipeline.cpp"
+mode = "test"
+hint = "push assigns a sequence. iterator::skip advances while the predicate is false. EventBus publishes to each subscriber; subscribe ignores duplicates and unsubscribe erases them."
+# Final ZH after all chapters: two C tasks and one C++ task.
+
+[[exercises]]
+name = "zh1_rle"
+path = "projects/final_exam/zh1_rle.c"
+mode = "test"
+hint = "Walk one run at a time. Write the character, then the run length digits reversed from a small buffer. Check cap before each write."
+
+[[exercises]]
+name = "zh2_list"
+path = "projects/final_exam/zh2_list.c"
+mode = "test"
+hint = "insert_sorted walks a Node **slot. remove_duplicates unlinks and frees the duplicate. reverse moves each node to the front."
+
+[[exercises]]
+name = "zh3_polynomial"
+path = "projects/final_exam/zh3_polynomial.cpp"
+mode = "test"
+hint = "Resize for +=. Convolve coefficients for *. Evaluate with Horner. Print signs and omit coefficient 1 except for the constant term."
